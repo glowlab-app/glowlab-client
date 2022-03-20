@@ -1,13 +1,13 @@
 const constants = {
-	APP_NAME: "Sqwid",
-	APP_DESCRIPTION: "An ocean of possibilities",
+	APP_NAME: "Tephra",
+	APP_DESCRIPTION: "A mountain of possibilities",
 	APP_ABOUT:
 		"%APP_NAME% aims to build a new creative economy — a world where creators can use the Reef blockchain to value their work in entirely new ways, and build stronger connections with their supporters.",
-	APP_WEBSITE: "https://sqwid.app",
+	APP_WEBSITE: "https://tephra.app",
 	APP_SCAN_BASE_URL: "https://reefscan.com",
 	SOCIAL: {
-		TWITTER_HANDLE: "sqwid-app",
-		GITHUB_HANDLE: "sqwid-app",
+		TWITTER_HANDLE: "tephra-app",
+		GITHUB_HANDLE: "tephra-app",
 	},
 	STATE_TYPES: ["Available", "Sale", "Auction", "Raffle", "Loan"],
 	STATE_EMPTY_MESSAGE_MAP: [
