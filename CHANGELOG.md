@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.3.5 (2022-03-20)
+
+
+### Bug Fixes
+
+* replacements for brand ([5cbbbfb](https://github.com/boidushya/tephra-client/commit/5cbbbfb0e10f57c1e0ed351bf4ac2738d202c870))
+
 ### 0.3.4 (2022-03-20)
 
 
