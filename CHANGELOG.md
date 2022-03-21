@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.3.7 (2022-03-21)
+
+
+### Bug Fixes
+
+* create button color ([fd22433](https://github.com/boidushya/tephra-client/commit/fd22433ca9fc8e0846541f0588eb27d9fa105e60))
+
 ### 0.3.6 (2022-03-21)
 
 
