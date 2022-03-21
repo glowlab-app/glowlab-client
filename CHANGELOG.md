@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.3.6 (2022-03-21)
+
+
+### Bug Fixes
+
+* modified logo ([af13ffe](https://github.com/boidushya/tephra-client/commit/af13ffedb2ff4c091b90a526679f2ab2004db5df))
+
 ### 0.3.5 (2022-03-20)
 
 
