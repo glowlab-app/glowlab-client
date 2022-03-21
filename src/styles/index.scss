@@ -4,7 +4,7 @@
 	/*
 		app config
 	*/
-	--app-theme-value: 205, 23, 55;
+	--app-theme-value: 211, 84, 0;
 	--app-theme-opacity: 0.5;
 	--app-background: hsl(0, 100%, 2%);
 	--app-background-transparent: hsla(350, 30%, 4%, 85%);
@@ -15,7 +15,7 @@
 		var(--app-theme-opacity)
 	);
 	--app-theme-primary-dark: rgba(var(--app-theme-value), 0.1);
-	--app-theme-primary-disabled: rgb(205, 23, 55);
+	--app-theme-primary-disabled: rgb(136, 54, 0);
 	--app-container-bg-primary: hsl(240, 10%, 16%);
 	--app-container-text-primary: rgb(120, 121, 135);
 	--app-container-text-primary-hover: hsl(240, 6%, 75%);

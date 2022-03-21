@@ -45,7 +45,7 @@ const Wrapper = styled.div`
 		background: -webkit-linear-gradient(
 			0deg,
 			var(--app-text) 0%,
-			#eb6161 50%,
+			rgb(var(--app-theme-value)) 50%,
 			var(--app-text) 100%
 		);
 		background-size: 300%;
