@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.3.8 (2022-03-21)
+
+
+### Bug Fixes
+
+* modified theme color ([427844c](https://github.com/boidushya/tephra-client/commit/427844c17e39855e89466ad5e365dbd828478bf9))
+
 ### 0.3.7 (2022-03-21)
 
 
