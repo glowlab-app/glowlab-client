@@ -14,6 +14,7 @@ import { truncateAddress } from "@utils/textUtils";
 import { m, LazyMotion, domAnimation } from "framer-motion";
 import { getWithdrawableBalance, withdrawBalance } from "@utils/marketplace";
 import { convertREEFtoUSD } from "@utils/convertREEFtoUSD";
+import { formatReefPrice } from "@utils/formatReefPrice";
 
 const BasicDetailsContainer = styled.div`
 	display: flex;
@@ -231,8 +232,10 @@ const Withdraw = () => {
 									<WithdrawAmount>
 										<ReefIcon size={20} />{" "}
 										<span
-											title={numberSeparator(
-												Math.trunc(price).toString()
+											title={formatReefPrice(
+												numberSeparator(
+													Math.trunc(price).toString()
+												)
 											)}
 										>
 											{numberSeparator(Math.trunc(price))}
