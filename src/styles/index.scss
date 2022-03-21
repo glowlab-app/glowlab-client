@@ -4,10 +4,10 @@
 	/*
 		app config
 	*/
-	--app-theme-value: 13, 104, 216;
+	--app-theme-value: 205, 23, 55;
 	--app-theme-opacity: 0.5;
-	--app-background: hsl(230, 36%, 4%);
-	--app-background-transparent: hsla(230, 36%, 4%, 85%);
+	--app-background: hsl(0, 100%, 2%);
+	--app-background-transparent: hsla(350, 30%, 4%, 85%);
 	--app-text: hsl(0, 0%, 100%);
 	--app-theme-primary: rgb(var(--app-theme-value));
 	--app-theme-primary-transparent: rgba(
@@ -15,7 +15,7 @@
 		var(--app-theme-opacity)
 	);
 	--app-theme-primary-dark: rgba(var(--app-theme-value), 0.1);
-	--app-theme-primary-disabled: rgb(11, 77, 159);
+	--app-theme-primary-disabled: rgb(205, 23, 55);
 	--app-container-bg-primary: hsl(240, 10%, 16%);
 	--app-container-text-primary: rgb(120, 121, 135);
 	--app-container-text-primary-hover: hsl(240, 6%, 75%);
@@ -31,7 +31,7 @@
 	--local-gradient: linear-gradient(
 		calc(90deg + var(--img-angle)),
 		rgba(var(--app-theme-value), 0.15) 0%,
-		rgba(135, 190, 254, 0.1) 100%
+		rgba(160, 129, 129, 0.1) 100%
 	);
 
 	--app-banner-bg: var(--local-vignette), var(--local-dot-pattern),

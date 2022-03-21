@@ -1,13 +1,63 @@
 .animate-icon {
+	--duration: 0.2s;
+	position: relative;
 	cursor: pointer;
-	&:hover svg {
-		stroke: currentColor;
-		stroke-width: 2.5px;
-		stroke-dasharray: 50px;
-		stroke-dashoffset: 50px;
-		stroke-linecap: round;
-		stroke-linejoin: round;
-		animation: animate-logo 1.2s ease forwards;
+	color: white;
+	svg {
+		fill: currentColor;
+	}
+	.sprinkler {
+		position: absolute;
+		height: 0.5rem;
+		width: 0.125rem;
+		background-color: currentColor;
+		border-radius: 1000rem;
+		transform: rotate(45deg);
+		opacity: 0;
+		&--1 {
+			top: 22.5%;
+			left: 22.5%;
+		}
+		&--2 {
+			bottom: 25%;
+			right: 25%;
+		}
+		&--3 {
+			top: 0%;
+			left: 60%;
+			color: #888;
+			height: 0.55rem;
+		}
+		&--4 {
+			bottom: 50%;
+			right: 10%;
+			color: #888;
+			height: 0.55rem;
+		}
+		&--5 {
+			top: 0;
+			left: 90%;
+			color: rgba(102, 102, 102, 0.5);
+			height: 0.65rem;
+		}
+	}
+
+	&:hover {
+		animation: animate-logo var(--duration) ease forwards;
+		animation-iteration-count: 5;
+	}
+	&:hover .sprinkler {
+		animation: animate-sprinkles calc(var(--duration) * 1.5) linear forwards;
+		animation-iteration-count: 3;
+	}
+	&:hover .sprinkler--2 {
+		animation-delay: 0.1s;
+	}
+	&:hover .sprinkler--3 {
+		animation-delay: 0.05s;
+	}
+	&:hover .sprinkler--5 {
+		animation-delay: 0.15s;
 	}
 }
 
@@ -306,24 +356,65 @@ span.emoji {
 	}
 }
 
-@keyframes animate-logo {
+.animate-icon {
+	position: relative;
+	cursor: pointer;
+	color: white;
+	&:hover {
+		animation: animate-logo var(--duration) ease forwards;
+		animation-iteration-count: 5;
+	}
+	&:hover .sprinkler {
+		animation: animate-sprinkles calc(var(--duration) * 1.5) linear forwards;
+		animation-iteration-count: 3;
+	}
+	&:hover .sprinkler--2 {
+		animation-delay: 0.1s;
+	}
+	&:hover .sprinkler--3 {
+		animation-delay: 0.05s;
+	}
+	&:hover .sprinkler--5 {
+		animation-delay: 0.15s;
+	}
+}
+
+@keyframes animate-sprinkles {
 	0% {
-		stroke-dashoffset: 0px;
-		fill: currentColor;
+		opacity: 0;
 	}
-	15% {
-		fill: transparent;
+	25% {
+		transform: rotate(45deg);
+		opacity: 1;
 	}
-	50% {
-		fill: transparent;
-	}
-	75% {
-		stroke-width: 2.5px;
+	90% {
+		transform: rotate(45deg) translateX(0) translateX(2px) translateY(-2rem);
+		opacity: 0;
 	}
 	100% {
-		stroke-dashoffset: 110px;
-		fill: currentColor;
-		stroke-width: 0;
+		opacity: 0;
+	}
+}
+
+@keyframes animate-logo {
+	0% {
+		transform: translate(0.075rem, 0.075rem);
+	}
+	25% {
+		stroke: rgba(255, 69, 0, 0.2);
+		stroke-width: 16;
+		transform: translate(0.075rem, 0);
+	}
+	50% {
+		stroke: rgba(69, 0, 255, 0.2);
+		transform: translate(0.075rem, -0.075rem);
+	}
+	75% {
+		stroke: transparent;
+		transform: translate(0, 0.075rem);
+	}
+	100% {
+		transform: translate(0, 0);
 	}
 }
 

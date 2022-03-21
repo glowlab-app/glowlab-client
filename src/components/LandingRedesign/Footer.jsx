@@ -61,10 +61,8 @@ const LogoContainer = styled.a`
 	text-decoration: none;
 	width: fit-content;
 	color: var(--app-text);
-	svg {
-		height: 2.5rem;
-		width: 2.5rem;
-	}
+	display: flex;
+	align-items: center;
 	span,
 	svg {
 		vertical-align: middle;
@@ -261,8 +259,10 @@ const FooterContent = () => {
 	return (
 		<Container>
 			<LogoWrapper>
-				<LogoContainer href="/" className="animate-icon">
-					<LogoIcon />
+				<LogoContainer href="/">
+					<div className="animate-icon">
+						<LogoIcon />
+					</div>
 					<span>{constants.APP_NAME}</span>
 				</LogoContainer>
 			</LogoWrapper>

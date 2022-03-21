@@ -119,7 +119,7 @@ const Heading = styled.h1`
 	width: fit-content;
 	transition: color 0.1s, transform 0.1s;
 	padding: 0.2rem;
-	text-shadow: -0.2rem 0.1rem 0 var(--app-theme-primary);
+	text-shadow: -0.2rem 0.1rem 0 rgba(var(--app-theme-value), 0.75);
 	&:before {
 		content: "";
 		height: 100%;

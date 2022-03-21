@@ -54,6 +54,8 @@ const LogoContainer = styled.a`
 	font-weight: 900;
 	text-decoration: none;
 	color: var(--app-text);
+	display: flex;
+	align-items: center;
 	span,
 	svg {
 		vertical-align: middle;
@@ -87,8 +89,10 @@ const Navbar = React.memo(() => {
 	});
 	return (
 		<Nav blur={!isAtTop}>
-			<LogoContainer href="/" className="animate-icon">
-				<LogoIcon />
+			<LogoContainer href="/">
+				<div className="animate-icon">
+					<LogoIcon />
+				</div>
 				<span>{constants.APP_NAME}</span>
 			</LogoContainer>
 			<ContentContainer>
