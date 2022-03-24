@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import AuthContext from "@contexts/Auth/AuthContext";
 import styled from "styled-components";
 import { getAvatarFromId } from "@utils/getAvatarFromId";
-import ReefIcon from "@static/svg/ReefIcon";
+import NervosIcon from "@static/svg/NervosIcon";
 import { DividerHorizontal } from "@elements/Default/Divider";
 import { Link } from "react-router-dom";
 import { getBalance } from "@utils/getBalance";
@@ -72,8 +72,8 @@ const BalanceContainer = styled.div`
 	display: flex;
 	align-items: center;
 	svg:not(.loader) {
-		width: 24px;
-		height: 24px;
+		width: 20px;
+		height: 20px;
 	}
 `;
 
@@ -172,7 +172,7 @@ const Balance = () => {
 		<BalanceWrapper>
 			<h4>Balance</h4>
 			<BalanceContainer>
-				<ReefIcon /> <span>{balance}</span>
+				<NervosIcon /> <span>{balance}</span>
 			</BalanceContainer>
 		</BalanceWrapper>
 	);
@@ -200,7 +200,7 @@ const Withdraw = () => {
 			await withdrawBalance();
 		} catch (err) {
 			if (err.message.includes("No Reef to be claimed")) {
-				bread("Not enough REEF to withdraw");
+				bread("Not enough CKB to withdraw");
 			}
 		} finally {
 			setLoading(false);
@@ -230,7 +230,7 @@ const Withdraw = () => {
 								<h4>Available to withdraw</h4>
 								<WithdrawContainer>
 									<WithdrawAmount>
-										<ReefIcon size={20} />{" "}
+										<NervosIcon size={20} />{" "}
 										<span
 											title={formatReefPrice(
 												numberSeparator(

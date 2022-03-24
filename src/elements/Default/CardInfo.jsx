@@ -1,4 +1,4 @@
-import ReefIcon from "@static/svg/ReefIcon";
+import NervosIcon from "@static/svg/NervosIcon";
 import { numberSeparator } from "@utils/numberSeparator";
 import React from "react";
 import styled from "styled-components";
@@ -88,7 +88,7 @@ const CardInfo = ({ data }) => {
 			{data.highestBid !== "0" ? (
 				<MiddleContainer>
 					<HighestBidText title={numberSeparator(data.highestBid)}>
-						Highest Bid: <ReefIcon size={`1.25rem`} centered />{" "}
+						Highest Bid: <NervosIcon size={`1.25rem`} centered />{" "}
 						<span>{numberSeparator(data.highestBid)}</span>
 					</HighestBidText>
 				</MiddleContainer>
@@ -99,7 +99,7 @@ const CardInfo = ({ data }) => {
 				</Quantity>
 				{data.isOnSale && data.price !== "0" ? (
 					<Price title={numberSeparator(data.price)}>
-						<ReefIcon size={`1.5rem`} />
+						<NervosIcon size={`1.5rem`} />
 						<span>{numberSeparator(data.price)}</span>
 					</Price>
 				) : null}

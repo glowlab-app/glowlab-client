@@ -4,7 +4,7 @@ import Heading from "./Heading";
 import styled, { css } from "styled-components";
 import SacContext from "@contexts/Sac/SacContext";
 import { m, LazyMotion, domAnimation } from "framer-motion";
-import ReefIcon from "@static/svg/ReefIcon";
+import NervosIcon from "@static/svg/NervosIcon";
 import { useHistory } from "react-router";
 
 const centerFlex = css`
@@ -113,7 +113,7 @@ const Card = props => {
 						</label>
 					</p>
 					<p className="price">
-						<ReefIcon size={20} />
+						<NervosIcon size={20} />
 						<label title={props.price}>{props.price}</label>
 					</p>
 				</span>

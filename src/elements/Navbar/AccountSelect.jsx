@@ -542,7 +542,7 @@ const AccountSelect = ({ isActive, setIsActive, accounts }) => {
 								<br />
 								Please claim it and try logging in again.
 								<br />
-								You will need some Reef in order to pay for the
+								You will need some CKB in order to pay for the
 								transaction.
 							</Content>
 							<Button

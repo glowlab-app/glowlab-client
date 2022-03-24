@@ -3,7 +3,7 @@ import { BtnBaseAnimated } from "@elements/Default/BtnBase";
 import React, { useContext, useEffect, useState } from "react";
 import styled, { css } from "styled-components";
 import { domAnimation, LazyMotion } from "framer-motion";
-import ReefIcon from "@static/svg/ReefIcon";
+import NervosIcon from "@static/svg/NervosIcon";
 import { numberSeparator } from "@utils/numberSeparator";
 import {
 	format,
@@ -98,13 +98,14 @@ const Price = styled.div`
 	font-weight: 900;
 	font-size: 1.5rem;
 	display: flex;
-	align-items: flex-end;
+	align-items: center;
 	label {
 		vertical-align: middle;
 		max-width: 20rem;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		word-wrap: nowrap;
+		line-height: 1.667;
 	}
 	span {
 		vertical-align: middle;
@@ -322,7 +323,7 @@ const CurrentPrice = () => {
 	}, [collectibleInfo.conversionRate]);
 	return (
 		<Price>
-			<ReefIcon />
+			<NervosIcon size={24} />
 			<p>
 				<label title={numberSeparator(price.toString())}>
 					{numberSeparator(Math.trunc(price).toString())}
@@ -396,7 +397,7 @@ const MyRaffleValue = () => {
 			<Heading>Your Raffle Value</Heading>
 			{myRaffleValue.length ? (
 				<PriceContainer>
-					<ReefIcon size={28} />
+					<NervosIcon size={24} />
 					<p>{numberSeparator(myRaffleValue)}</p>
 				</PriceContainer>
 			) : (
@@ -445,7 +446,7 @@ const MyAuctionBid = () => {
 			<Heading>Your Bid</Heading>
 			{myBid.length ? (
 				<PriceContainer>
-					<ReefIcon size={28} />
+					<NervosIcon size={24} />
 					<p>{numberSeparator(myBid)}</p>
 				</PriceContainer>
 			) : (
@@ -461,7 +462,7 @@ const RaffleValue = () => {
 		<SectionContainer>
 			<Heading>Total Raffle Value</Heading>
 			<PriceContainer>
-				<ReefIcon size={28} />
+				<NervosIcon size={24} />
 				<p>{numberSeparator(formatReefPrice(stateInfo.totalValue))}</p>
 			</PriceContainer>
 		</SectionContainer>
@@ -484,7 +485,7 @@ const MinimumBid = () => {
 		<SectionContainer>
 			<Heading>Minimum Bid</Heading>
 			<PriceContainer>
-				<ReefIcon size={28} />
+				<NervosIcon size={24} />
 				<p>{numberSeparator(formatReefPrice(stateInfo.minBid))}</p>
 			</PriceContainer>
 		</SectionContainer>
@@ -500,7 +501,7 @@ const HighestBid = () => {
 				<SectionContainer>
 					<Heading align="right">Highest Bid</Heading>
 					<PriceContainer align="right">
-						<ReefIcon size={28} />
+						<NervosIcon size={24} />
 						<p>{numberSeparator(formatReefPrice(highestBid))}</p>
 					</PriceContainer>
 				</SectionContainer>
@@ -539,7 +540,7 @@ const PaybackFee = () => {
 		<SectionContainer>
 			<Heading align="right">Payback Fee</Heading>
 			<PriceContainer>
-				<ReefIcon size={28} />
+				<NervosIcon size={24} />
 				<p>
 					<label title={numberSeparator(paybackFee.toString())}>
 						{numberSeparator(paybackFee.toString())}

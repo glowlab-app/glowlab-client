@@ -3,7 +3,7 @@ import styled from "styled-components";
 import CollectibleContext from "@contexts/Collectible/CollectibleContext";
 import AuthContext from "@contexts/Auth/AuthContext";
 import { domAnimation, LazyMotion } from "framer-motion";
-import ReefIcon from "@static/svg/ReefIcon";
+import NervosIcon from "@static/svg/NervosIcon";
 import { numberSeparator } from "@utils/numberSeparator";
 import { BtnBaseAnimated } from "@elements/Default/BtnBase";
 import { BidsModal, PutOnSaleModal, BuyModal, TransferModal } from "./Modals";
@@ -110,7 +110,7 @@ const CurrentPrice = () => {
 	}, [collectibleInfo.price]);
 	return (
 		<Price>
-			<ReefIcon />
+			<NervosIcon />
 			<p>
 				<label title={numberSeparator(collectibleInfo.price)}>
 					{numberSeparator(collectibleInfo.price)}
@@ -129,7 +129,7 @@ const HighestBid = () => {
 				<>
 					Highest Bid:{" "}
 					<label title={numberSeparator(collectibleInfo.highestBid)}>
-						<ReefIcon centered size={24} />{" "}
+						<NervosIcon centered size={24} />{" "}
 						{numberSeparator(collectibleInfo.highestBid)}
 					</label>
 				</>

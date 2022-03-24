@@ -1,4 +1,4 @@
-import ReefIcon from "@static/svg/ReefIcon";
+import NervosIcon from "@static/svg/NervosIcon";
 import { numberSeparator } from "@utils/numberSeparator";
 import React, { useContext, useEffect, useState } from "react";
 import styled, { css } from "styled-components";
@@ -225,7 +225,7 @@ const BidsCard = info => {
 					</UserInfo>
 					<PriceInfo>
 						<Price>
-							<ReefIcon centered size={24} />{" "}
+							<NervosIcon centered size={24} />{" "}
 							<span>{numberSeparator(info.price)}</span>
 						</Price>
 						<Copies>{numberSeparator(info.copies)} Copies</Copies>

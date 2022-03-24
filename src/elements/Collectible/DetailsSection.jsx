@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import CollectibleContext from "@contexts/Collectible/CollectibleContext";
 import AuthContext from "@contexts/Auth/AuthContext";
-import ReefIcon from "@static/svg/ReefIcon";
+import NervosIcon from "@static/svg/NervosIcon";
 import constants from "@utils/constants";
 import getIPFSURL from "@utils/getIPFSURL";
 import { LazyMotion, m, domAnimation } from "framer-motion";
@@ -53,6 +53,7 @@ const HTMLLinkWrapper = styled.a`
 	svg {
 		width: 1.5rem;
 		height: 1.5rem;
+		margin: 0;
 	}
 	span {
 		font-size: 1.25rem;
@@ -366,8 +367,8 @@ const ScanSection = () => {
 	const url = `${constants.APP_SCAN_BASE_URL}/contract/${collectibleInfo?.meta?.tokenContract}`;
 	return (
 		<HTMLLinkWrapper target="_blank" rel="noopener noreferrer" href={url}>
-			<ReefIcon />
-			<span>ReefScan</span>
+			<NervosIcon />
+			<span>CKB Explorer</span>
 		</HTMLLinkWrapper>
 	);
 };

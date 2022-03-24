@@ -5,7 +5,7 @@ import ProgressBar from "./ProgressBar";
 import SacContext from "@contexts/Sac/SacContext";
 import styled from "styled-components";
 import { numberSeparator } from "@utils/numberSeparator";
-import ReefIcon from "@static/svg/ReefIcon";
+import NervosIcon from "@static/svg/NervosIcon";
 import { respondTo } from "@styles/styledMediaQuery";
 
 const ContentContainer = styled.div`
@@ -53,7 +53,7 @@ const WaveSection = () => {
 				<AccumulatedCollateral>
 					<h3>Accumulated Collateral</h3>
 					<p>
-						<ReefIcon size={24} />
+						<NervosIcon size={24} />
 						<span>{numberSeparator(sacDetails.accumulated)}</span>
 					</p>
 				</AccumulatedCollateral>

@@ -24,7 +24,7 @@ import shortenIfAddress from "@utils/shortenIfAddress";
 import { numberSeparator } from "@utils/numberSeparator";
 import { BtnBaseAnimated } from "@elements/Default/BtnBase";
 import { LazyMotion, domAnimation, m } from "framer-motion";
-import ReefIcon from "@static/svg/ReefIcon";
+import NervosIcon from "@static/svg/NervosIcon";
 import { getWithdrawableBalance, withdrawBalance } from "@utils/marketplace";
 import { convertREEFtoUSD } from "@utils/convertREEFtoUSD";
 
@@ -397,7 +397,7 @@ const Withdraw = () => {
 			await withdrawBalance();
 		} catch (err) {
 			if (err.message.includes("No Reef to be claimed")) {
-				bread("Not enough REEF to withdraw");
+				bread("Not enough CKB to withdraw");
 			}
 		} finally {
 			setLoading(false);
@@ -415,7 +415,7 @@ const Withdraw = () => {
 					>
 						<WithdrawHeading>Available to Withdraw</WithdrawHeading>
 						<WithdrawAmount>
-							<ReefIcon size={22} />{" "}
+							<NervosIcon size={22} />{" "}
 							<span
 								title={numberSeparator(
 									Math.trunc(price).toString()
