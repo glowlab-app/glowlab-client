@@ -8,14 +8,12 @@ import React, {
 import styled, { css, keyframes } from "styled-components";
 import { Connect } from "@utils/connect";
 import { LazyMotion, domAnimation, m } from "framer-motion";
-import { truncateAddress } from "@utils/textUtils";
 import AuthContext from "@contexts/Auth/AuthContext";
 import bread from "@utils/bread";
 import ProfileElement from "./ProfileElement";
 import FadeLoaderIcon from "@static/svg/FadeLoader";
 import { DividerHorizontal } from "@elements/Default/Divider";
 import constants from "@utils/constants";
-import SimpleBar from "simplebar-react";
 import "simplebar/src/simplebar.css";
 import { defaultNetwork } from "@constants/networks";
 import { useHistory } from "react-router-dom";
@@ -23,18 +21,7 @@ import AccountSelectContext from "@contexts/AccountSelect/AccountSelectContext";
 import Select from "react-select";
 import { styles } from "@styles/reactSelectStyles";
 import useEscape from "@utils/useEscape";
-
-const StyledSimpleBar = styled(SimpleBar)`
-	min-width: 12rem;
-	p:not(:first-child) {
-		margin-top: 0.5rem;
-	}
-	.simplebar-track.simplebar-horizontal .simplebar-scrollbar:before,
-	.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
-		background: var(--app-background);
-	}
-`;
-
+import { BtnBaseAnimated } from "@elements/Default/BtnBase";
 const swipeRightToLeft = keyframes`
 	0% {
 		transform: translateX(100%);
@@ -77,6 +64,22 @@ const swipeUpwards = keyframes`
 		transform: translate(-50%,-100px);
 		opacity: 0;
 	}
+`;
+
+const StyledButton = styled(BtnBaseAnimated)`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: var(--font-family);
+	font-size: 1rem;
+	font-weight: 700;
+	padding: 0.675rem 1.25rem;
+	border-radius: 0.5rem;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	z-index: 2;
+	user-select: none;
 `;
 
 const modalEntryAnim = css`
@@ -140,10 +143,11 @@ const Modal = styled.div`
 		}
 		opacity: 0;
 		display: none;
+		z-index: 10;
 	}
 	&:hover {
 		.close-btn {
-			opacity: 1;
+			opacity: 0.75;
 			display: flex;
 		}
 	}
@@ -297,9 +301,8 @@ const NetworkSwitchButton = () => {
 		control: (base, state) => ({
 			...base,
 			boxShadow: state.isFocused ? 0 : 0,
-			border: "solid 0.15rem var(--app-theme-primary)",
-			background:
-				"rgba(var(--app-theme-value), var(--app-theme-opacity))",
+			border: "solid 0.2rem var(--app-container-bg-secondary)",
+			background: "transparent",
 			color: "var(--app-theme-text)",
 			borderRadius: "0.5rem",
 			height: "100%",
@@ -335,6 +338,27 @@ const NetworkSwitchButton = () => {
 	);
 };
 
+const AuthenticateBtn = ({ props }) => {
+	return (
+		<StyledButton
+			whileHover={{
+				y: -5,
+				x: 0,
+				scale: 1.02,
+			}}
+			whileTap={{
+				scale: 0.99,
+			}}
+			onClick={() => {
+				window.location.reload();
+			}}
+			{...props}
+		>
+			Authenticate
+		</StyledButton>
+	);
+};
+
 const AccountSelect = ({ isActive, setIsActive, accounts }) => {
 	const { redirect } = useContext(AccountSelectContext);
 	const [elemIsVisible, setElemIsVisible] = useState(isActive);
@@ -355,6 +379,7 @@ const AccountSelect = ({ isActive, setIsActive, accounts }) => {
 	const history = useHistory();
 	//eslint-disable-next-line
 	const [selectedAccount, setSelectedAccount] = useState(null);
+	//eslint-disable-next-line
 	const _onAccountChange = async val => {
 		setLoading(true);
 		let account = accounts.find(acc => acc.meta.name === val);
@@ -452,57 +477,7 @@ const AccountSelect = ({ isActive, setIsActive, accounts }) => {
 						</span>
 
 						{auth && <ProfileElement />}
-						<Title>Choose an{auth && "other"} account</Title>
-						<StyledSimpleBar style={{ maxHeight: 300 }}>
-							{accounts?.length ? (
-								<>
-									{accounts
-										? accounts
-												.filter(item =>
-													auth
-														? auth.address !==
-														  item.address
-														: true
-												)
-												.map((account, index) => {
-													return (
-														<m.p
-															className="account-name"
-															whileHover={{
-																y: -2.5,
-																x: 0,
-															}}
-															whileTap={{
-																scale: 0.99,
-															}}
-															onClick={() =>
-																_onAccountChange(
-																	account.meta
-																		.name
-																)
-															}
-															key={index}
-														>
-															{" "}
-															{account.meta.name}
-															<label
-																title={
-																	account.address
-																}
-															>
-																{truncateAddress(
-																	account.address
-																)}
-															</label>{" "}
-														</m.p>
-													);
-												})
-										: null}
-								</>
-							) : (
-								"Please connect your wallet"
-							)}
-						</StyledSimpleBar>
+						<AuthenticateBtn>Authenticate</AuthenticateBtn>
 						{!auth && (
 							<>
 								<DividerHorizontal />
