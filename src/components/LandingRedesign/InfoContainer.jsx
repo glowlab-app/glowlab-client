@@ -170,7 +170,7 @@ const InfoContainer = () => {
 	const { auth } = useContext(AuthContext);
 
 	const getImage = dim =>
-		`https://res.cloudinary.com/etjfo/image/upload/${dim}/v1646079322/sqwid/banner.png`;
+		`https://res.cloudinary.com/etjfo/image/upload/${dim}/v1648151341/tephra/banner.png`;
 
 	let about = constants.APP_ABOUT;
 
@@ -223,7 +223,7 @@ const InfoContainer = () => {
 									${getImage("f_auto,q_70,w_1024")} 1280w,
 							`}
 							sizes="(min-width: 30em) 28em, 100vw"
-							src={`https://res.cloudinary.com/etjfo/image/upload/v1646079322/sqwid/banner.png`}
+							src={`https://res.cloudinary.com/etjfo/image/upload/v1648151341/tephra/banner.png`}
 							alt="banner"
 						/>
 					</ImageContainer>
