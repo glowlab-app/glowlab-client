@@ -454,7 +454,7 @@ const WarningText = ({ isBlurred, setIsBlurred }) => {
 	const warningText = (
 		<p>
 			This item is pending moderation. If you're the creator and you've
-			just minted it, please allow a few minutes for Sqwid to approve it.
+			just minted it, please allow a few minutes for Tephra to approve it.
 		</p>
 	);
 
