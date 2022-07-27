@@ -4,7 +4,7 @@ const constants = {
 	APP_ABOUT:
 		"%APP_NAME% aims to build a new creative economy — a world where creators can use the Nervos blockchain to value their work in entirely new ways, and build stronger connections with their supporters.",
 	APP_WEBSITE: "https://tephra.app",
-	APP_SCAN_BASE_URL: "https://v1.aggron.gwscan.com",
+	APP_SCAN_BASE_URL: "https://gw-explorer.nervosdao.community/",
 	SOCIAL: {
 		TWITTER_HANDLE: "tephra-app",
 		GITHUB_HANDLE: "tephra-app",

@@ -6,9 +6,7 @@ import { formatEther } from "ethers/lib/utils";
 
 export const getBalance = async () => {
 	const { provider } = await Interact();
-	// const web3 = new Web3 (provider);
 	const address = JSON.parse(localStorage.getItem("auth"))?.auth.address;
-	// console.log(address);
 	return formatEther (await provider.getBalance (address));
 };
 

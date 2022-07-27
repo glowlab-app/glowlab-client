@@ -12,7 +12,7 @@ import RaffleSection from "@elements/Collections/Sections/RaffleSection";
 import LoanSection from "@elements/Collections/Sections/LoanSection";
 import Select from "react-select";
 import { styles } from "@styles/reactSelectStyles";
-import { getCloudflareURL } from "@utils/getIPFSURL";
+import { getInfuraURL } from "@utils/getIPFSURL";
 import useActiveTabs from "@utils/useActiveTabs";
 import shortenIfAddress from "@utils/shortenIfAddress";
 
@@ -251,7 +251,7 @@ const HeroSection = ({ collectionInfo, setIsLoading, isLoading }) => {
 							<Header>
 								<CollectionsLogo
 									title={collectionInfo.name}
-									url={getCloudflareURL(collectionInfo.thumb)}
+									url={getInfuraURL(collectionInfo.thumb)}
 								/>
 								<span>{collectionInfo.name}</span>
 							</Header>
