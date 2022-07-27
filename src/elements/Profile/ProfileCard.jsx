@@ -386,7 +386,7 @@ const ProfileCard = () => {
 				} else if (auth) {
 					setUserData({
 						...userData,
-						address: auth.evmAddress,
+						address: auth.address,
 						name: data.displayName,
 						avatar: getAvatarFromId(auth.address),
 						description: data.bio,
@@ -400,7 +400,7 @@ const ProfileCard = () => {
 				setIsLoading(false);
 			});
 		id
-			? (id === auth?.address || id === auth?.evmAddress) &&
+			? (id.toLowerCase () === auth?.address.toLowerCase () || id === auth?.evmAddress) &&
 			  setIsOwnAccount(true)
 			: setIsOwnAccount(true);
 		//eslint-disable-next-line

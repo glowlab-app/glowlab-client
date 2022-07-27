@@ -1,10 +1,10 @@
 const constants = {
 	APP_NAME: "Tephra",
-	APP_DESCRIPTION: "A mountain of possibilities",
+	APP_DESCRIPTION: "Eruption of innovation",
 	APP_ABOUT:
-		"%APP_NAME% aims to build a new creative economy — a world where creators can use the Reef blockchain to value their work in entirely new ways, and build stronger connections with their supporters.",
+		"%APP_NAME% aims to build a new creative economy — a world where creators can use the Nervos blockchain to value their work in entirely new ways, and build stronger connections with their supporters.",
 	APP_WEBSITE: "https://tephra.app",
-	APP_SCAN_BASE_URL: "https://reefscan.com",
+	APP_SCAN_BASE_URL: "https://v1.aggron.gwscan.com",
 	SOCIAL: {
 		TWITTER_HANDLE: "tephra-app",
 		GITHUB_HANDLE: "tephra-app",
@@ -38,7 +38,7 @@ const constants = {
 		loan: "https://github.com/sqwid-app/sqwid-docs/blob/main/market_interaction/loan.md",
 	},
 	EXPLORE_PAGINATION_LIMIT: 12,
-	COPY_WARNING: "Use this address only on the Reef Chain",
+	COPY_WARNING: "Use this address only on the Godwoken",
 };
 
 export default constants;

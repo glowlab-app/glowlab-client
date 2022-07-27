@@ -11,17 +11,23 @@ const approveMarketplace = async () => {
 		contractABI,
 		signer
 	);
+	// console.log (contract);
 
 	const tx = await contract.setApprovalForAll(
 		getContract("marketplace"),
-		true
+		true,
+		// {
+		// 	gasLimit: 1000000,
+		// }
 	);
+	// console.log (tx);
 	return await tx.wait();
 };
 
 const isMarketplaceApproved = async () => {
-	let { provider, signer } = await Interact();
-	const address = await signer.getAddress();
+	let { provider } = await Interact();
+	// const address = await signer.getAddress();
+	const address = JSON.parse(localStorage.getItem("auth"))?.auth.address;
 
 	let contract = new ethers.Contract(
 		getContract("erc1155"),

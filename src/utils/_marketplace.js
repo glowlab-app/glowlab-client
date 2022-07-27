@@ -8,13 +8,13 @@ import { getContract } from "./network";
 
 const collectibleContract = (signerOrProvider, address = null) =>
 	new ethers.Contract(
-		address || getContract("reef_testnet", "erc1155"),
+		address || getContract("godwoken_testnet", "erc1155"),
 		collectibleContractABI,
 		signerOrProvider
 	);
 const marketplaceContract = signerOrProvider =>
 	new ethers.Contract(
-		getContract("reef_testnet", "marketplace"),
+		getContract("godwoken_testnet", "marketplace"),
 		marketplaceContractABI,
 		signerOrProvider
 	);

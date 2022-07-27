@@ -1,16 +1,16 @@
 export const networks = {
-	reef_testnet: {
-		rpc: "wss://rpc-testnet.reefscan.com/ws",
+	godwoken_testnet: {
+		rpc: "https://godwoken-testnet-v1.ckbapp.dev",
 		contracts: {
-			marketplace: "0xB2871bF369ce67cc0E251b449fc21A6DbAe93c2e",
-			erc1155: "0x49aC7Dc3ddCAb2e08dCb8ED1F18a0E0369515E47",
-			utility: "0x74d9c321Ec73F717c53788d70357fB146B25f5C4",
+			marketplace: "0xCEdc1A9b6a3b0266f00d2e4198DA6B6e434896EA",
+			erc1155: "0xa87071a188e3e8d3e30f53a335ecc329d88026b7",
+			utility: "0xcedc1a9b6a3b0266f00d2e4198da6b6e434896ea",
 		},
-		backend: "https://testnet-api.sqwid.app",
-		// backend: "http://localhost:8080",
+		// backend: "https://testnet-api.sqwid.app",
+		backend: "http://localhost:8080",
 	},
-	reef_mainnet: {
-		rpc: "wss://rpc.reefscan.com/ws",
+	godwoken_mainnet: {
+		rpc: "https://godwoken-testnet-web3-v1-rpc.ckbapp.dev",
 		contracts: {
 			marketplace: "0xe124E8bD72Df842189e6E0762558191f267E5E9d",
 			erc1155: "0x5728847Ca5d2466dE6AcD33597D874f480acdAdB",
@@ -21,4 +21,4 @@ export const networks = {
 };
 
 export const defaultNetwork =
-	process.env.REACT_APP_DEFAULT_NETWORK || "reef_testnet";
+	process.env.REACT_APP_DEFAULT_NETWORK || "godwoken_testnet";

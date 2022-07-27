@@ -260,11 +260,11 @@ const NetworkSwitchButton = () => {
 	const { auth, logout } = useContext(AuthContext);
 	const options = [
 		{
-			value: "reef_testnet",
+			value: "godwoken_testnet",
 			label: "Testnet",
 		},
 		{
-			value: "reef_mainnet",
+			value: "godwoken_mainnet",
 			label: "Mainnet",
 		},
 	];
@@ -339,6 +339,10 @@ const NetworkSwitchButton = () => {
 };
 
 const AuthenticateBtn = ({ props }) => {
+	// eslint-disable-next-line
+	const { auth, login, logout, setLoading } = useContext(AuthContext);
+	const { redirect } = useContext(AccountSelectContext);
+	const history = useHistory();
 	return (
 		<StyledButton
 			whileHover={{
@@ -350,7 +354,20 @@ const AuthenticateBtn = ({ props }) => {
 				scale: 0.99,
 			}}
 			onClick={() => {
-				window.location.reload();
+				// window.location.reload();
+				Connect ().then (async response => {
+					// login({ auth: { polyjuiceAddress: response.account.polyjuiceAddress, evmAddress: response.account.ethAddress } });
+					login ({ auth: {
+						polyjuiceAddress: response.account.polyjuiceAddress,
+						evmAddress: response.account.ethAddress,
+						address: response.account.ethAddress }
+					});
+					// setIsActive(false);
+					redirect.length !== 0 && history.push(redirect);
+				}).catch (error => {
+					// console.log (error);
+					throw error;
+				});
 			}}
 			{...props}
 		>
@@ -477,7 +494,7 @@ const AccountSelect = ({ isActive, setIsActive, accounts }) => {
 						</span>
 
 						{auth && <ProfileElement />}
-						<AuthenticateBtn>Authenticate</AuthenticateBtn>
+						{!auth && <AuthenticateBtn>Authenticate</AuthenticateBtn>}
 						{!auth && (
 							<>
 								<DividerHorizontal />

@@ -164,9 +164,9 @@ const BidsCard = info => {
 	const { collectibleInfo, setCollectibleInfo } =
 		useContext(CollectibleContext);
 	const isSeller =
-		auth && auth.evmAddress === collectibleInfo.owners.current.id;
+		auth && auth.address.toLowerCase () === collectibleInfo.owners.current.id.toLowerCase ();
 	// const isSeller = true
-	const isBidder = auth && auth.evmAddress === info.bidder.id && !isSeller;
+	const isBidder = auth && auth.address.toLowerCase () === info.bidder.id.toLowerCase () && !isSeller;
 
 	const [isLoading, setIsLoading] = useState(false);
 

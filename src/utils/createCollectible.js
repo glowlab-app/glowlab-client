@@ -155,7 +155,8 @@ const createCollectible = async files => {
 		: null;
 
 	let { signer } = await Interact(address);
-	const to = await signer.getAddress();
+	// const to = await signer.getAddress();
+	const to = address;
 	let contract = new ethers.Contract(
 		getContract("marketplace"),
 		contractABI,
@@ -164,15 +165,20 @@ const createCollectible = async files => {
 
 	try {
 		const approved = await isMarketplaceApproved();
+		// console.log (approved);
 		if (!approved) {
 			await approveMarketplace();
 		}
+		// console.log ('mint nft');
 		const nft = await contract.mint(
 			copies,
 			meta,
 			file.type.split("/")[0],
 			to,
-			royalty
+			royalty,
+			// {
+			// 	gasLimit: 100000
+			// }
 		);
 		// eslint-disable-next-line
 		const receipt = await nft.wait();
@@ -196,6 +202,7 @@ const createCollectible = async files => {
 		);
 		return positionId;
 	} catch (err) {
+		// console.log (err);
 		return { error: err };
 	}
 };

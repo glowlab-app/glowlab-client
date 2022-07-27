@@ -419,7 +419,7 @@ const Existing = ({ isActive, setIsActive }) => {
 	const { files, setFiles } = useContext(FileContext);
 	useEffect(() => {
 		axios
-			.get(`${getBackend()}/get/collections/owner/${auth.evmAddress}`)
+			.get(`${getBackend()}/get/collections/owner/${auth.address}`)
 			.then(res => {
 				localStorage.setItem(
 					"collections",

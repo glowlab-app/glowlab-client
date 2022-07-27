@@ -25,6 +25,9 @@ const AuthProvider = props => {
 		});
 	};
 
+	// console.log (state);
+	// console.log (JSON.parse (state.token));
+
 	return (
 		<AuthContext.Provider
 			value={{

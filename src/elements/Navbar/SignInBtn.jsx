@@ -7,6 +7,7 @@ import Loading from "@elements/Default/Loading";
 import { BtnBaseAnimated } from "@elements/Default/BtnBase";
 import InfoBtn from "./InfoBtn";
 import AccountSelectContext from "@contexts/AccountSelect/AccountSelectContext";
+import { truncateAddress } from "@utils/textUtils";
 
 const Btn = styled(BtnBaseAnimated)`
 	display: flex;
@@ -40,7 +41,7 @@ const SignInBtn = () => {
 	const [username, setUsername] = useState("");
 	const { loading, auth } = useContext(AuthContext);
 	useEffect(() => {
-		auth && setUsername(auth.meta.name);
+		auth && setUsername(truncateAddress(auth.address, 6));
 	}, [auth]);
 	return (
 		<LazyMotion features={domAnimation}>

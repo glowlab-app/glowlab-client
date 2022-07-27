@@ -11,8 +11,9 @@ const AccountSelectProvider = props => {
 	const [currentAccounts, setCurrentAccounts] = useState(null);
 	const handleInit = (path = "") => {
 		(async () => {
-			let accs = await Init();
-			setCurrentAccounts(accs);
+			// let accs = await Init();
+			await Init();
+			// setCurrentAccounts(accs);
 		})();
 		setIsSelectionActive(!isSelectionActive);
 		setRedirect(path);

@@ -1205,23 +1205,24 @@ const MarketSection = () => {
 
 			Thank you past semolini, very cool!
 		*/
+		// console.log (collectibleInfo.owner.address, auth.address);
 		let updatedInfo = {
 			...collectibleInfo,
 			market: {
 				state: collectibleInfo.state,
-				owned: auth?.evmAddress === collectibleInfo.owner.address,
+				owned: auth?.address.toLowerCase () === collectibleInfo.owner.address.toLowerCase (),
 				active:
 					stateInfo && stateInfo.deadline
 						? Date.now() < stateInfo.deadline * 1000
 						: false, // only for auctions, raffles, loans (dictated by deadline)
 				highestBidder: stateInfo
-					? auth?.evmAddress === stateInfo.highestBidder?.address
+					? auth?.address.toLowerCase () === stateInfo.highestBidder?.address.toLowerCase ()
 					: false, // only for auctions
 				funded: stateInfo
 					? Number(stateInfo.lender?.address) !== 0
 					: false, // only for loans
 				funder: stateInfo
-					? auth?.evmAddress === stateInfo.lender?.address
+					? auth?.address.toLowerCase () === stateInfo.lender?.address.toLowerCase ()
 					: false, // only for loans
 			},
 		};

@@ -164,7 +164,7 @@ const Balance = () => {
 		const fetchBalance = async () => {
 			const bal = await getBalance();
 			// const balNum = Number(bal) / 10 ** 18;
-			setBalance(numberSeparator(bal.toFixed(2).toString()));
+			setBalance(numberSeparator(bal));
 		};
 		fetchBalance();
 	}, []);
@@ -188,8 +188,8 @@ const Withdraw = () => {
 			const availableBalance = await getWithdrawableBalance();
 			// const availableBalance = 1000;
 			const usd = await convertREEFtoUSD(availableBalance);
-			setPrice(Number(availableBalance));
-			setUsdPrice(usd.toFixed(2));
+			setPrice(isNaN (Number(availableBalance)) ? availableBalance : 0);
+			setUsdPrice(usd?.toFixed(2) || 0);
 		};
 		fetchPrice();
 	}, []);
@@ -258,12 +258,12 @@ const ProfileElement = () => {
 	const [username, setUsername] = useState("");
 	const { auth } = useContext(AuthContext);
 	useEffect(() => {
-		auth && setUsername(auth.meta.name);
+		auth && setUsername(auth.address);
 	}, [auth]);
 
 	//eslint-disable-next-line
 	const copyAddress = () => {
-		navigator.clipboard.writeText(auth.evmAddress).then(() => {
+		navigator.clipboard.writeText(auth.address).then(() => {
 			bread(
 				<>
 					<p
@@ -301,9 +301,9 @@ const ProfileElement = () => {
 					</div>
 					<ProfileAddress
 						// onClick={copyAddress}
-						title={auth.evmAddress}
+						title={auth.address}
 					>
-						{truncateAddress(auth.evmAddress, 6)}
+						{truncateAddress(auth.address, 6)}
 					</ProfileAddress>
 					<LazyMotion features={domAnimation}>
 						<ButtonContainer

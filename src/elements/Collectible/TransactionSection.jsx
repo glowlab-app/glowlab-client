@@ -253,7 +253,7 @@ const Sale = () => {
 	const { auth } = useContext(AuthContext);
 	const { collectibleInfo } = useContext(CollectibleContext);
 	const isOwner = auth
-		? collectibleInfo.owners.current.id === auth.evmAddress
+		? collectibleInfo.owners.current.id === auth.address
 		: null;
 	// let isOwner = false;
 	// const isOwner =  auth?collectibleInfo.owners.some((item)=>item.id === auth.address):null
@@ -283,7 +283,7 @@ const NoSale = () => {
 	const { auth } = useContext(AuthContext);
 	const { collectibleInfo } = useContext(CollectibleContext);
 	const isOwner = auth
-		? collectibleInfo.owners.current.id === auth.evmAddress
+		? collectibleInfo.owners.current.id === auth.address
 		: null;
 	return (
 		<>
