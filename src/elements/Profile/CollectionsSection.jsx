@@ -5,7 +5,7 @@ import CustomScrollbar from "@elements/Default/CustomScrollbar";
 import AuthContext from "@contexts/Auth/AuthContext";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import { getCloudflareURL } from "@utils/getIPFSURL";
+import { getInfuraURL } from "@utils/getIPFSURL";
 import LoadingIcon from "@static/svg/LoadingIcon";
 import { respondTo } from "@styles/styledMediaQuery";
 import useIsTabletOrMobile from "@utils/useIsTabletOMobile";
@@ -76,7 +76,7 @@ const CollectionsSection = () => {
 				setCards(
 					res.data.collections.map(item => {
 						return {
-							src: getCloudflareURL(item.data.image),
+							src: getInfuraURL(item.data.image),
 							title: item.data.name,
 							link: `/collections/${item.id}`,
 						};

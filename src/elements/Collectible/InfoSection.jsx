@@ -3,7 +3,7 @@ import AuthContext from "@contexts/Auth/AuthContext";
 import CollectibleContext from "@contexts/Collectible/CollectibleContext";
 import { respondTo } from "@styles/styledMediaQuery";
 import { getAvatarFromId } from "@utils/getAvatarFromId";
-import { getCloudflareURL } from "@utils/getIPFSURL";
+import { getInfuraURL } from "@utils/getIPFSURL";
 import shortenIfAddress from "@utils/shortenIfAddress";
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
@@ -152,7 +152,7 @@ const InfoSection = () => {
 					<Heading align="right">Collection</Heading>
 					<Content>
 						<Logo
-							url={getCloudflareURL(
+							url={getInfuraURL(
 								collectibleInfo.collection.image
 							)}
 						/>
