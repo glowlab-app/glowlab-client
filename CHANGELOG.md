@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.3.10 (2022-07-27)
+
+
+### Bug Fixes
+
+* get it to work with dedicated ipfs ([a630e1a](https://github.com/tephra-app/tephra-client/commit/a630e1a4be660ea75fa6e1221474c26ef3c5ba0b))
+
 ### 0.3.9 (2022-03-21)
 
 
