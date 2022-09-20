@@ -28,7 +28,7 @@ import { useHistory } from "react-router-dom";
 import intervalToFormattedDuration from "@utils/intervalToFormattedDuration";
 import { minutesToMilliseconds } from "date-fns";
 import AuthContext from "@contexts/Auth/AuthContext";
-import constants from "@utils/constants";
+// import constants from "@utils/constants";
 
 const swipeDownwards = keyframes`
 	0% {
@@ -208,11 +208,7 @@ const InfoSection = ({ fee, link }) => {
 				Service Fees: <span>{fee}%</span>
 			</InfoElements>
 			<InfoElements>
-				<StyledLink
-					href={constants.DOCUMENTATION[link]}
-					target="_blank"
-					rel="noopener noreferrer"
-				>
+				<StyledLink target="_blank" rel="noopener noreferrer">
 					Need more info?
 					<AlertIcon />
 				</StyledLink>
