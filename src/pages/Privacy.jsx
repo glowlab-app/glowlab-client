@@ -30,10 +30,10 @@ const Privacy = () => {
 				<h1>Privacy Policy</h1>
 
 				<p>
-					At Sqwid, accessible from https://sqwid.app/, one of our
+					At Glowlab, accessible from https://glowlab.xyz/, one of our
 					main priorities is the privacy of our visitors. This Privacy
 					Policy document contains types of information that is
-					collected and recorded by Sqwid and how we use it.
+					collected and recorded by Glowlab and how we use it.
 				</p>
 
 				<p>
@@ -44,7 +44,7 @@ const Privacy = () => {
 				<p>
 					This Privacy Policy applies only to our online activities
 					and is valid for visitors to our website with regards to the
-					information that they shared and/or collect in Sqwid. This
+					information that they shared and/or collect in Glowlab. This
 					policy is not applicable to any information collected
 					offline or via channels other than this website.
 				</p>
@@ -99,30 +99,30 @@ const Privacy = () => {
 				<h2>Log Files</h2>
 
 				<p>
-					Sqwid follows a standard procedure of using log files. These
-					files log visitors when they visit websites. All hosting
-					companies do this and a part of hosting services' analytics.
-					The information collected by log files include internet
-					protocol (IP) addresses, browser type, Internet Service
-					Provider (ISP), date and time stamp, referring/exit pages,
-					and possibly the number of clicks. These are not linked to
-					any information that is personally identifiable. The purpose
-					of the information is for analyzing trends, administering
-					the site, tracking users' movement on the website, and
-					gathering demographic information.
+					Glowlab follows a standard procedure of using log files.
+					These files log visitors when they visit websites. All
+					hosting companies do this and a part of hosting services'
+					analytics. The information collected by log files include
+					internet protocol (IP) addresses, browser type, Internet
+					Service Provider (ISP), date and time stamp, referring/exit
+					pages, and possibly the number of clicks. These are not
+					linked to any information that is personally identifiable.
+					The purpose of the information is for analyzing trends,
+					administering the site, tracking users' movement on the
+					website, and gathering demographic information.
 				</p>
 
 				<h2>Advertising Partners Privacy Policies</h2>
 
 				<p>
 					You may consult this list to find the Privacy Policy for
-					each of the advertising partners of Sqwid.
+					each of the advertising partners of Glowlab.
 				</p>
 
 				<p>
 					Third-party ad servers or ad networks uses technologies like
 					cookies, JavaScript, or Web Beacons that are used in their
-					respective advertisements and links that appear on Sqwid,
+					respective advertisements and links that appear on Glowlab,
 					which are sent directly to users' browser. They
 					automatically receive your IP address when this occurs.
 					These technologies are used to measure the effectiveness of
@@ -131,14 +131,14 @@ const Privacy = () => {
 				</p>
 
 				<p>
-					Note that Sqwid has no access to or control over these
+					Note that Glowlab has no access to or control over these
 					cookies that are used by third-party advertisers.
 				</p>
 
 				<h2>Third Party Privacy Policies</h2>
 
 				<p>
-					Sqwid's Privacy Policy does not apply to other advertisers
+					Glowlab's Privacy Policy does not apply to other advertisers
 					or websites. Thus, we are advising you to consult the
 					respective Privacy Policies of these third-party ad servers
 					for more detailed information. It may include their
@@ -234,7 +234,7 @@ const Privacy = () => {
 				</p>
 
 				<p>
-					Sqwid does not knowingly collect any Personal Identifiable
+					Glowlab does not knowingly collect any Personal Identifiable
 					Information from children under the age of 13. If you think
 					that your child provided this kind of information on our
 					website, we strongly encourage you to contact us immediately

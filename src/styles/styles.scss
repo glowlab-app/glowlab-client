@@ -356,39 +356,20 @@ span.emoji {
 	}
 }
 
-@keyframes animate-sprinkles {
-	0% {
-		opacity: 0;
-	}
-	25% {
-		transform: rotate(45deg);
-		opacity: 1;
-	}
-	90% {
-		transform: rotate(45deg) translateX(0) translateX(2px) translateY(-2rem);
-		opacity: 0;
-	}
-	100% {
-		opacity: 0;
-	}
-}
-
 @keyframes animate-logo {
 	0% {
 		transform: translate(0.075rem, 0.075rem);
 	}
 	25% {
-		stroke: rgba(255, 69, 0, 0.2);
 		stroke-width: 16;
-		transform: translate(0.075rem, 0);
+		transform: translate(0.075rem, 0) rotate(-5deg);
 	}
 	50% {
-		stroke: rgba(69, 0, 255, 0.2);
-		transform: translate(0.075rem, -0.075rem);
+		transform: translate(0.075rem, -0.075rem) rotate(0deg);
 	}
 	75% {
 		stroke: transparent;
-		transform: translate(0, 0.075rem);
+		transform: translate(0, 0.075rem) rotate(5deg);
 	}
 	100% {
 		transform: translate(0, 0);

@@ -168,7 +168,7 @@ const HeroSection = () => {
 
 	const card = {
 		id: 1,
-		name: "Sqwid",
+		name: "GLOWLABS",
 		image: "https://images.unsplash.com/photo-1639480032529-36b4af636464?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80",
 		price: "100",
 		wave: "6",

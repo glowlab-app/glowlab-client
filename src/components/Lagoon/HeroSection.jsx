@@ -202,14 +202,14 @@ const RegularSection = () => {
 	const lagoonList = [
 		{
 			name: "Ink Sacs",
-			author: "SQWID",
+			author: "GLOWLABS",
 			link: "/sac/1",
 			img: "https://unsplash.it/300/300?image=13",
 			featured: true,
 		},
 		{
 			name: "Ink Sacs",
-			author: "SQWID",
+			author: "GLOWLABS",
 			link: "/sac/2",
 			img: "https://unsplash.it/300/300?image=10",
 			featured: false,
