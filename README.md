@@ -3,9 +3,9 @@
 	<h1 align="center">Glowlab - An NFT Marketplace</h1>
 </p>
 <p align="center">
-  <img alt="Version" src="https://shields.io/github/package-json/v/boidushya/tephra-client" />
+  <img alt="Version" src="https://shields.io/github/package-json/v/boidushya/glowlab-client" />
   <a href="https://github.com/boidushya/tephra-client//blob/master/LICENSE" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/github/license/boidushya/tephra-client" />
+    <img alt="License: MIT" src="https://img.shields.io/github/license/boidushya/glowlab-client" />
   </a>
 </p>
 
@@ -16,7 +16,7 @@
 
 ## 👨‍💻 About Glowlab
 
-Glowlab is an NFT marketplace running on the Reef chain that features per-item
+Glowlab is an NFT marketplace running on the EVMOS that features per-item
 customizable royalties.\
 \
 All Glowlab NFTs are ERC1155 compatible which means each one can have multiple
@@ -57,9 +57,9 @@ yarn && yarn start
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!<br />Feel free to check
-[issues page](Glowlabhttps://github.com/boidushya/tephra-client/issues). You can
-also take a look at the
-[contributing guide](Glowlabhttps://github.com/boidushya/tephra-client/blob/master/CONTRIBUTING.md).
+[issues page](Glowlabhttps://github.com/boidushya/glowlab-client/issues). You
+can also take a look at the
+[contributing guide](Glowlabhttps://github.com/boidushya/glowlab-client/blob/master/CONTRIBUTING.md).
 
 ## ✨ Show your support
 
@@ -69,7 +69,7 @@ Give us a ⭐️ if you liked this project!
 
 Copyright © 2021 [Andrei Cracanau](https://github.com/andithemudkip) &
 [Boidushya Bhattacharyay](https://github.com/boidushya).<br /> This project is
-[MIT](Glowlabhttps://github.com/boidushya/tephra-client//blob/master/LICENSE)
+[MIT](Glowlabhttps://github.com/boidushya/glowlab-client//blob/master/LICENSE)
 licensed.
 
 ---
