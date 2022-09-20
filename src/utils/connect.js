@@ -132,6 +132,7 @@ import { ethers } from "ethers";
 
 // import { PolyjuiceHttpProvider, PolyjuiceAccounts } from "@polyjuice-provider/web3";
 import { AddressTranslator } from "nervos-godwoken-integration";
+import constants from "./constants";
 
 
 const addressTranslator = new AddressTranslator ();
@@ -144,13 +145,22 @@ let account = {
     polyjuiceAddress: null
 };
 
+window.ethereum.on('accountsChanged', function (accounts) {
+    if (accounts [0] !== account.ethAddress) {
+        localStorage.removeItem("tokens");
+		localStorage.removeItem("auth");
+		localStorage.removeItem(`${constants.APP_NAME.toLowerCase()}__balance`);
+        window.location.reload();
+    }
+})
+
 // const polyjuiceConfig = {
 //     web3Url: getRPC (), 
 // };
 
-const Init = async () => {
+const Init = async (reload = false) => {
     // await window.ethereum.enable ();
-    if (account.ethAddress && signer) return account;
+    if (!reload && account.ethAddress && signer) return account;
     web3 = new Web3 (getRPC ());
     // console.log (web3);
     // console.log (web3.eth.accounts);
@@ -191,13 +201,13 @@ const Init = async () => {
     }
 }
 
-const Connect = async () => {
-    if (!account.ethAddress) await Init ();
+const Connect = async (reload = false) => {
+    if (!account.ethAddress) await Init (reload);
 
     let res = await axios.get(`${getBackend ()}/nonce?address=${account.ethAddress}`);
     let { nonce } = res.data;
 
-    // console.log (nonce);
+    console.log (nonce);
     let msg = web3.utils.fromUtf8 (nonce);
     // console.log (msg);
     let signature = await window.ethereum.request ({ method: 'personal_sign', params: [msg, account.ethAddress] });

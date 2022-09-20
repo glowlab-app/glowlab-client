@@ -1,13 +1,13 @@
 const constants = {
-	APP_NAME: "Tephra",
-	APP_DESCRIPTION: "Eruption of innovation",
+	APP_NAME: "Glowlab",
+	APP_DESCRIPTION: "Glowing with creativity",
 	APP_ABOUT:
-		"%APP_NAME% aims to build a new creative economy — a world where creators can use the Nervos blockchain to value their work in entirely new ways, and build stronger connections with their supporters.",
-	APP_WEBSITE: "https://tephra.app",
+		"Where art meets the blockchain.",
+	APP_WEBSITE: "https://glowlab.xyz",
 	APP_SCAN_BASE_URL: "https://gw-explorer.nervosdao.community/",
 	SOCIAL: {
-		TWITTER_HANDLE: "tephra-app",
-		GITHUB_HANDLE: "tephra-app",
+		TWITTER_HANDLE: "glowlab-app",
+		GITHUB_HANDLE: "glowlab",
 	},
 	STATE_TYPES: ["Available", "Sale", "Auction", "Raffle", "Loan"],
 	STATE_EMPTY_MESSAGE_MAP: [
@@ -27,7 +27,7 @@ const constants = {
 	CREATE_ACCEPTED_MIMETYPES: [
 		"image/jpeg",
 		"image/png",
-		// "video/mp4",
+		"video/mp4",
 	],
 	DOCUMENTATION: {
 		base: "https://github.com/sqwid-app/sqwid-docs",
@@ -38,7 +38,7 @@ const constants = {
 		loan: "https://github.com/sqwid-app/sqwid-docs/blob/main/market_interaction/loan.md",
 	},
 	EXPLORE_PAGINATION_LIMIT: 12,
-	COPY_WARNING: "Use this address only on the Godwoken",
+	COPY_WARNING: "Use this address only on the Evmos",
 };
 
 export default constants;

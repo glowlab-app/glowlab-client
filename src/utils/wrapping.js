@@ -8,7 +8,7 @@ import ERC1155ABI from "constants/contracts/SqwidERC1155";
 // export const isWrapperApproved = async (contractAddress) => {
 //     let { signer } = await Interact ();
 //     let contract = new ethers.Contract (
-//         getContract ('godwoken_testnet', 'wrapper'),
+//         getContract ('glowlab_testnet', 'wrapper'),
 //         wrapperABI,
 //         signer
 //     );
@@ -20,7 +20,7 @@ import ERC1155ABI from "constants/contracts/SqwidERC1155";
 // export const approveWrapper = async (contractAddress) => {
 //     let { signer } = await Interact ();
 //     let contract = new ethers.Contract (
-//         getContract ('godwoken_testnet', 'wrapper'),
+//         getContract ('glowlab_testnet', 'wrapper'),
 //         wrapperABI,
 //         signer
 //     );

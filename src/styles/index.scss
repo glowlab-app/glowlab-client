@@ -4,24 +4,25 @@
 	/*
 		app config
 	*/
-	--app-theme-value: 211, 84, 0;
+	--app-theme-value: 38, 170, 82;
 	--app-theme-opacity: 0.5;
-	--app-background: hsl(0, 50%, 2%);
+	--app-background: rgb(2, 5, 8);
 	--app-background-transparent: hsla(0, 50%, 2%, 85%);
 	--app-text: hsl(0, 0%, 100%);
 	--app-theme-primary: rgb(var(--app-theme-value));
+	// --app-theme-primary: rgb(38, 170, 82);
 	--app-theme-primary-transparent: rgba(
 		var(--app-theme-value),
 		var(--app-theme-opacity)
 	);
 	--app-theme-primary-dark: rgba(var(--app-theme-value), 0.1);
-	--app-theme-primary-disabled: rgb(136, 54, 0);
-	--app-container-bg-primary: hsl(21, 11%, 12%);
-	--app-container-text-primary: rgb(180, 167, 163);
-	--app-container-text-primary-hover: hsl(27, 9%, 81%);
-	--app-container-bg-secondary: hsl(11, 10%, 21%);
+	--app-theme-primary-disabled: rgb(23, 39, 90);
+	--app-container-bg-primary: hsl(231, 11%, 12%);
+	--app-container-text-primary: rgb(163, 168, 180);
+	--app-container-text-primary-hover: hsl(227, 9%, 81%);
+	--app-container-bg-secondary: hsl(235, 10%, 21%);
 	--app-container-check: #0dbe00;
-	--app-modal-btn-primary: hsl(20, 13%, 9%);
+	--app-modal-btn-primary: hsl(240, 13%, 9%);
 
 	--wave-start-opacity: 0.6;
 
@@ -31,7 +32,7 @@
 	--local-gradient: linear-gradient(
 		calc(90deg + var(--img-angle)),
 		rgba(var(--app-theme-value), 0.15) 0%,
-		rgba(160, 129, 129, 0.1) 100%
+		rgba(129, 139, 160, 0.1) 100%
 	);
 
 	--app-banner-bg: var(--local-vignette), var(--local-dot-pattern),

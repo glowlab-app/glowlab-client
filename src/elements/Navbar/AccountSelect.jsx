@@ -260,11 +260,11 @@ const NetworkSwitchButton = () => {
 	const { auth, logout } = useContext(AuthContext);
 	const options = [
 		{
-			value: "godwoken_testnet",
+			value: "glowlab_testnet",
 			label: "Testnet",
 		},
 		{
-			value: "godwoken_mainnet",
+			value: "glowlab_mainnet",
 			label: "Mainnet",
 		},
 	];

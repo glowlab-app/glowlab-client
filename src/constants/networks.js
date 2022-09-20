@@ -1,26 +1,26 @@
 export const networks = {
-	godwoken_testnet: {
-		rpc: "https://godwoken-testnet-v1.ckbapp.dev",
+	glowlab_testnet: {
+		rpc: "https://eth.bd.evmos.dev:8545",
 		contracts: {
-			marketplace: "0xCEdc1A9b6a3b0266f00d2e4198DA6B6e434896EA",
-			erc1155: "0xa87071a188e3e8d3e30f53a335ecc329d88026b7",
-			utility: "0xcedc1a9b6a3b0266f00d2e4198da6b6e434896ea",
+			marketplace: "0xaC3c382A8c9c1b58f0e1d8fecf4B520f6Be833AC", // updated
+			erc1155: "0xcCB22CdA4857E1665dE3043FF77ff125c9E0A2A7", // updated
+			utility: "0x15D45AE2f71C708d4dc85e95961d528fdfbbCca4", // updated
 		},
-		backend: "https://testnet-api.tephra.app",
-		// backend: "http://localhost:8080",
+		// backend: "https://testnet-api.tephra.app",
+		backend: "http://localhost:8080",
 	},
-	godwoken_mainnet: {
-		rpc: "https://godwoken-testnet-v1.ckbapp.dev",
+	glowlab_mainnet: {
+		rpc: "https://eth.bd.evmos.dev:8545",
 		contracts: {
-			marketplace: "0xCEdc1A9b6a3b0266f00d2e4198DA6B6e434896EA",
-			erc1155: "0xa87071a188e3e8d3e30f53a335ecc329d88026b7",
-			utility: "0xcedc1a9b6a3b0266f00d2e4198da6b6e434896ea",
+			marketplace: "0xaC3c382A8c9c1b58f0e1d8fecf4B520f6Be833AC",
+			erc1155: "0xcCB22CdA4857E1665dE3043FF77ff125c9E0A2A7",
+			utility: "0x15D45AE2f71C708d4dc85e95961d528fdfbbCca4",
 		},
 		backend: "https://testnet-api.tephra.app",
 	},
 };
 
-// export const defaultNetwork =
-// 	process.env.REACT_APP_DEFAULT_NETWORK || "godwoken_testnet";
+export const defaultNetwork =
+	process.env.REACT_APP_DEFAULT_NETWORK || "glowlab_testnet";
 
-export const defaultNetwork = "godwoken_testnet";
+// export const defaultNetwork = "glowlab_testnet";

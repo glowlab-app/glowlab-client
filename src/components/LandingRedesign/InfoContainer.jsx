@@ -45,7 +45,7 @@ const Wrapper = styled.div`
 		background: -webkit-linear-gradient(
 			0deg,
 			var(--app-text) 0%,
-			#e59b6a 50%,
+			#26aa52 50%,
 			var(--app-text) 100%
 		);
 		background-size: 300%;
@@ -170,7 +170,7 @@ const InfoContainer = () => {
 	const { auth } = useContext(AuthContext);
 
 	const getImage = dim =>
-		`https://res.cloudinary.com/etjfo/image/upload/${dim}/v1648153478/tephra/banner.png`;
+		`https://res.cloudinary.com/pinify/image/upload/${dim}/v1663693591/phones-banner.png`;
 
 	let about = constants.APP_ABOUT;
 
@@ -223,7 +223,7 @@ const InfoContainer = () => {
 									${getImage("f_auto,q_70,w_1024")} 1280w,
 							`}
 							sizes="(min-width: 30em) 28em, 100vw"
-							src={`https://res.cloudinary.com/etjfo/image/upload/v1648153478/tephra/banner.png`}
+							src={`https://res.cloudinary.com/pinify/image/upload/v1663693591/phones-banner.png`}
 							alt="banner"
 						/>
 					</ImageContainer>

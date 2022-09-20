@@ -15,10 +15,7 @@ const approveMarketplace = async () => {
 
 	const tx = await contract.setApprovalForAll(
 		getContract("marketplace"),
-		true,
-		// {
-		// 	gasLimit: 1000000,
-		// }
+		true
 	);
 	// console.log (tx);
 	return await tx.wait();
