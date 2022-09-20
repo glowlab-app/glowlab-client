@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.3.13 (2022-09-20)
+
+
+### Bug Fixes
+
+* black screen ([e42bfce](https://github.com/glowlab-app/glowlab-client/commit/e42bfce65f5a1c00689f9638837f6ad8cb43611d))
+
 ### 0.3.12 (2022-09-20)
 
 ### 0.3.11 (2022-09-20)
