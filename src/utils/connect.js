@@ -145,8 +145,8 @@ let account = {
     polyjuiceAddress: null
 };
 
-window.ethereum.on('accountsChanged', function (accounts) {
-    if (accounts [0] !== account.ethAddress) {
+window?.ethereum?.on('accountsChanged', function (accounts) {
+    if (accounts[0] !== account.ethAddress) {
         localStorage.removeItem("tokens");
 		localStorage.removeItem("auth");
 		localStorage.removeItem(`${constants.APP_NAME.toLowerCase()}__balance`);
@@ -207,7 +207,6 @@ const Connect = async (reload = false) => {
     let res = await axios.get(`${getBackend ()}/nonce?address=${account.ethAddress}`);
     let { nonce } = res.data;
 
-    console.log (nonce);
     let msg = web3.utils.fromUtf8 (nonce);
     // console.log (msg);
     let signature = await window.ethereum.request ({ method: 'personal_sign', params: [msg, account.ethAddress] });

@@ -125,7 +125,6 @@ const InfoSection = () => {
 	// 	setCurrentOwner(owner?owner:collectibleInfo.owners[0])
 	// //eslint-disable-next-line
 	// }, [collectibleInfo, auth])
-	console.log (collectibleInfo);
 	return (
 		<GroupContainer>
 			<Group>
