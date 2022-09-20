@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import AuthContext from "@contexts/Auth/AuthContext";
 import styled from "styled-components";
 import { getAvatarFromId } from "@utils/getAvatarFromId";
-import NervosIcon from "@static/svg/NervosIcon";
+import EVMOSIcon from "@static/svg/EVMOSIcon";
 import { DividerHorizontal } from "@elements/Default/Divider";
 import { Link } from "react-router-dom";
 import { getBalance } from "@utils/getBalance";
@@ -172,7 +172,7 @@ const Balance = () => {
 		<BalanceWrapper>
 			<h4>Balance</h4>
 			<BalanceContainer>
-				<NervosIcon /> <span>{balance}</span>
+				<EVMOSIcon /> <span>{balance}</span>
 			</BalanceContainer>
 		</BalanceWrapper>
 	);
@@ -188,7 +188,7 @@ const Withdraw = () => {
 			const availableBalance = await getWithdrawableBalance();
 			// const availableBalance = 1000;
 			const usd = await convertREEFtoUSD(availableBalance);
-			setPrice(isNaN (Number(availableBalance)) ? availableBalance : 0);
+			setPrice(isNaN(Number(availableBalance)) ? availableBalance : 0);
 			setUsdPrice(usd?.toFixed(2) || 0);
 		};
 		fetchPrice();
@@ -200,7 +200,7 @@ const Withdraw = () => {
 			await withdrawBalance();
 		} catch (err) {
 			if (err.message.includes("No Reef to be claimed")) {
-				bread("Not enough CKB to withdraw");
+				bread("Not enough EVMOS to withdraw");
 			}
 		} finally {
 			setLoading(false);
@@ -230,7 +230,7 @@ const Withdraw = () => {
 								<h4>Available to withdraw</h4>
 								<WithdrawContainer>
 									<WithdrawAmount>
-										<NervosIcon size={20} />{" "}
+										<EVMOSIcon size={20} />{" "}
 										<span
 											title={formatReefPrice(
 												numberSeparator(

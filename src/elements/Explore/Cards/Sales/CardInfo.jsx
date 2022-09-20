@@ -1,4 +1,4 @@
-import NervosIcon from "@static/svg/NervosIcon";
+import EVMOSIcon from "@static/svg/EVMOSIcon";
 import { numberSeparator } from "@utils/numberSeparator";
 import React, { useEffect, useState } from "react";
 import CardHeaderIcons from "@elements/Explore/Cards/Default/CardHeaderIcons";
@@ -33,7 +33,7 @@ const CardInfo = ({ data }) => {
 			<BottomContainer>
 				{price ? (
 					<Price title={`Price: ${price} REEF`}>
-						<NervosIcon size={`1.5rem`} />
+						<EVMOSIcon size={`1.5rem`} />
 						<span>{price}</span>
 					</Price>
 				) : null}

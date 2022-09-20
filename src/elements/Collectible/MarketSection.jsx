@@ -3,7 +3,7 @@ import { BtnBaseAnimated } from "@elements/Default/BtnBase";
 import React, { useContext, useEffect, useState } from "react";
 import styled, { css } from "styled-components";
 import { domAnimation, LazyMotion } from "framer-motion";
-import NervosIcon from "@static/svg/NervosIcon";
+import EVMOSIcon from "@static/svg/EVMOSIcon";
 import { numberSeparator } from "@utils/numberSeparator";
 import {
 	format,
@@ -323,7 +323,7 @@ const CurrentPrice = () => {
 	}, [collectibleInfo.conversionRate]);
 	return (
 		<Price>
-			<NervosIcon size={24} />
+			<EVMOSIcon size={24} />
 			<p>
 				<label title={numberSeparator(price.toString())}>
 					{numberSeparator(Math.trunc(price).toString())}
@@ -397,7 +397,7 @@ const MyRaffleValue = () => {
 			<Heading>Your Raffle Value</Heading>
 			{myRaffleValue.length ? (
 				<PriceContainer>
-					<NervosIcon size={24} />
+					<EVMOSIcon size={24} />
 					<p>{numberSeparator(myRaffleValue)}</p>
 				</PriceContainer>
 			) : (
@@ -446,7 +446,7 @@ const MyAuctionBid = () => {
 			<Heading>Your Bid</Heading>
 			{myBid.length ? (
 				<PriceContainer>
-					<NervosIcon size={24} />
+					<EVMOSIcon size={24} />
 					<p>{numberSeparator(myBid)}</p>
 				</PriceContainer>
 			) : (
@@ -462,7 +462,7 @@ const RaffleValue = () => {
 		<SectionContainer>
 			<Heading>Total Raffle Value</Heading>
 			<PriceContainer>
-				<NervosIcon size={24} />
+				<EVMOSIcon size={24} />
 				<p>{numberSeparator(formatReefPrice(stateInfo.totalValue))}</p>
 			</PriceContainer>
 		</SectionContainer>
@@ -485,7 +485,7 @@ const MinimumBid = () => {
 		<SectionContainer>
 			<Heading>Minimum Bid</Heading>
 			<PriceContainer>
-				<NervosIcon size={24} />
+				<EVMOSIcon size={24} />
 				<p>{numberSeparator(formatReefPrice(stateInfo.minBid))}</p>
 			</PriceContainer>
 		</SectionContainer>
@@ -501,7 +501,7 @@ const HighestBid = () => {
 				<SectionContainer>
 					<Heading align="right">Highest Bid</Heading>
 					<PriceContainer align="right">
-						<NervosIcon size={24} />
+						<EVMOSIcon size={24} />
 						<p>{numberSeparator(formatReefPrice(highestBid))}</p>
 					</PriceContainer>
 				</SectionContainer>
@@ -540,7 +540,7 @@ const PaybackFee = () => {
 		<SectionContainer>
 			<Heading align="right">Payback Fee</Heading>
 			<PriceContainer>
-				<NervosIcon size={24} />
+				<EVMOSIcon size={24} />
 				<p>
 					<label title={numberSeparator(paybackFee.toString())}>
 						{numberSeparator(paybackFee.toString())}
@@ -1210,19 +1210,23 @@ const MarketSection = () => {
 			...collectibleInfo,
 			market: {
 				state: collectibleInfo.state,
-				owned: auth?.address.toLowerCase () === collectibleInfo.owner.address.toLowerCase (),
+				owned:
+					auth?.address.toLowerCase() ===
+					collectibleInfo.owner.address.toLowerCase(),
 				active:
 					stateInfo && stateInfo.deadline
 						? Date.now() < stateInfo.deadline * 1000
 						: false, // only for auctions, raffles, loans (dictated by deadline)
 				highestBidder: stateInfo
-					? auth?.address.toLowerCase () === stateInfo.highestBidder?.address.toLowerCase ()
+					? auth?.address.toLowerCase() ===
+					  stateInfo.highestBidder?.address.toLowerCase()
 					: false, // only for auctions
 				funded: stateInfo
 					? Number(stateInfo.lender?.address) !== 0
 					: false, // only for loans
 				funder: stateInfo
-					? auth?.address.toLowerCase () === stateInfo.lender?.address.toLowerCase ()
+					? auth?.address.toLowerCase() ===
+					  stateInfo.lender?.address.toLowerCase()
 					: false, // only for loans
 			},
 		};

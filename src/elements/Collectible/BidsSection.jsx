@@ -1,4 +1,4 @@
-import NervosIcon from "@static/svg/NervosIcon";
+import EVMOSIcon from "@static/svg/EVMOSIcon";
 import { numberSeparator } from "@utils/numberSeparator";
 import React, { useContext, useEffect, useState } from "react";
 import styled, { css } from "styled-components";
@@ -164,9 +164,14 @@ const BidsCard = info => {
 	const { collectibleInfo, setCollectibleInfo } =
 		useContext(CollectibleContext);
 	const isSeller =
-		auth && auth.address.toLowerCase () === collectibleInfo.owners.current.id.toLowerCase ();
+		auth &&
+		auth.address.toLowerCase() ===
+			collectibleInfo.owners.current.id.toLowerCase();
 	// const isSeller = true
-	const isBidder = auth && auth.address.toLowerCase () === info.bidder.id.toLowerCase () && !isSeller;
+	const isBidder =
+		auth &&
+		auth.address.toLowerCase() === info.bidder.id.toLowerCase() &&
+		!isSeller;
 
 	const [isLoading, setIsLoading] = useState(false);
 
@@ -225,7 +230,7 @@ const BidsCard = info => {
 					</UserInfo>
 					<PriceInfo>
 						<Price>
-							<NervosIcon centered size={24} />{" "}
+							<EVMOSIcon centered size={24} />{" "}
 							<span>{numberSeparator(info.price)}</span>
 						</Price>
 						<Copies>{numberSeparator(info.copies)} Copies</Copies>

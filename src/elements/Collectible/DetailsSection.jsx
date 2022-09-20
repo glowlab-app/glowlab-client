@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import CollectibleContext from "@contexts/Collectible/CollectibleContext";
 import AuthContext from "@contexts/Auth/AuthContext";
-import NervosIcon from "@static/svg/NervosIcon";
+import EVMOSIcon from "@static/svg/EVMOSIcon";
 import constants from "@utils/constants";
 import { getInfuraURL } from "@utils/getIPFSURL";
 import { LazyMotion, m, domAnimation } from "framer-motion";
@@ -396,7 +396,7 @@ const ScanSection = () => {
 	const url = `${constants.APP_SCAN_BASE_URL}/address/${collectibleInfo?.meta?.tokenContract}`;
 	return (
 		<HTMLLinkWrapper target="_blank" rel="noopener noreferrer" href={url}>
-			<NervosIcon />
+			<EVMOSIcon />
 			<span>Token Contract</span>
 		</HTMLLinkWrapper>
 	);

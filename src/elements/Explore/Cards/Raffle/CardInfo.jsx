@@ -1,4 +1,4 @@
-import NervosIcon from "@static/svg/NervosIcon";
+import EVMOSIcon from "@static/svg/EVMOSIcon";
 import { numberSeparator } from "@utils/numberSeparator";
 import React from "react";
 import CardHeaderIcons from "@elements/Explore/Cards/Default/CardHeaderIcons";
@@ -37,7 +37,7 @@ const CardInfo = ({ data }) => {
 				>
 					<p>{totalAddresses} Entries</p>
 					<Accumulated>
-						<NervosIcon size={`1rem`} />
+						<EVMOSIcon size={`1rem`} />
 						<span>
 							{numberSeparator(
 								formatReefPrice(data.raffle?.totalValue)

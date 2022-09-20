@@ -1,4 +1,4 @@
-import NervosIcon from "@static/svg/NervosIcon";
+import EVMOSIcon from "@static/svg/EVMOSIcon";
 import { numberSeparator } from "@utils/numberSeparator";
 import React from "react";
 import CardHeaderIcons from "@elements/Explore/Cards/Default/CardHeaderIcons";
@@ -32,12 +32,12 @@ const CardInfo = ({ data }) => {
 			<BottomContainer>
 				{minBid && highestBid && data.auction?.highestBid === 0 ? (
 					<Price title={`Minimum Bid: ${minBid} REEF`}>
-						<NervosIcon size={`1.5rem`} />
+						<EVMOSIcon size={`1.5rem`} />
 						<span>{minBid}</span>
 					</Price>
 				) : (
 					<Price title={`Highest Bid: ${highestBid} REEF`}>
-						<NervosIcon size={`1.5rem`} />
+						<EVMOSIcon size={`1.5rem`} />
 						<span>{highestBid}</span>
 					</Price>
 				)}
