@@ -330,8 +330,8 @@ const ReportBtn = () => {
 	const { collectibleInfo } = useContext(CollectibleContext);
 	const { auth } = useContext(AuthContext);
 	const [mode, setMode] = useState("");
-	const appealMailTo = `mailto:report@sqwid.app?subject=%5BAPPEAL%5D%20Requesting%20manual%20review%20for%20item%20with%20id%20${collectibleInfo.positionId}&body=Feel%20like%20your%20content%20was%20misidentified%20as%20violating%20our%20policy%3F%0D%0ALet%20us%20know%20below%3A`;
-	const reportMailTo = `mailto:report@sqwid.app?subject=%5BREPORT%5D%20Requesting%20manual%20review%20for%20item%20with%20id%20${collectibleInfo.positionId}&body=Why%20are%20you%20reporting%20this%3F%0D%0A(Add%20an%20x%20inside%20%5B%5D%20to%20check%20it%2C%20for%20example%2C%20%5Bx%5D%20This%20content%20is%20spam)%0D%0A%0D%0A%5B%5D%20This%20content%20is%20spam%0D%0A%5B%5D%20This%20content%20should%20be%20marked%20as%20explicit%0D%0A%5B%5D%20This%20content%20is%20abusive%0D%0A%5B%5D%20This%20content%20promotes%2Fadvocates%20harm%2Fsuicide%2Flethal%20violence%0D%0A%5B%5D%20This%20content%20infringes%20upon%20my%20copyright%0D%0A%5B%5D%20Other%20%0D%0A%0D%0AOther%20(optional)%3A%20%3CFill%20this%20only%20if%20you've%20checked%20the%20%22other%22%20option%3E%0D%0A%0D%0ARemarks%20(optional)%3A%20%3CAnything%20else%20you%20want%20to%20mention%3E`;
+	const appealMailTo = `mailto:report@glowlab.xyz?subject=%5BAPPEAL%5D%20Requesting%20manual%20review%20for%20item%20with%20id%20${collectibleInfo.positionId}&body=Feel%20like%20your%20content%20was%20misidentified%20as%20violating%20our%20policy%3F%0D%0ALet%20us%20know%20below%3A`;
+	const reportMailTo = `mailto:report@glowlab.xyz?subject=%5BREPORT%5D%20Requesting%20manual%20review%20for%20item%20with%20id%20${collectibleInfo.positionId}&body=Why%20are%20you%20reporting%20this%3F%0D%0A(Add%20an%20x%20inside%20%5B%5D%20to%20check%20it%2C%20for%20example%2C%20%5Bx%5D%20This%20content%20is%20spam)%0D%0A%0D%0A%5B%5D%20This%20content%20is%20spam%0D%0A%5B%5D%20This%20content%20should%20be%20marked%20as%20explicit%0D%0A%5B%5D%20This%20content%20is%20abusive%0D%0A%5B%5D%20This%20content%20promotes%2Fadvocates%20harm%2Fsuicide%2Flethal%20violence%0D%0A%5B%5D%20This%20content%20infringes%20upon%20my%20copyright%0D%0A%5B%5D%20Other%20%0D%0A%0D%0AOther%20(optional)%3A%20%3CFill%20this%20only%20if%20you've%20checked%20the%20%22other%22%20option%3E%0D%0A%0D%0ARemarks%20(optional)%3A%20%3CAnything%20else%20you%20want%20to%20mention%3E`;
 	useEffect(() => {
 		if (
 			collectibleInfo.approved === false &&
@@ -420,7 +420,7 @@ const ItemIdSection = () => {
 	return (
 		<TextWrapper>
 			<svg fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-				<path d="m21 7.702-8.5 4.62v9.678c1.567-.865 6.379-3.517 7.977-4.399.323-.177.523-.519.523-.891zm-9.5 4.619-8.5-4.722v9.006c0 .37.197.708.514.887 1.59.898 6.416 3.623 7.986 4.508zm-8.079-5.629 8.579 4.763 8.672-4.713s-6.631-3.738-8.186-4.614c-.151-.085-.319-.128-.486-.128-.168 0-.335.043-.486.128-1.555.876-8.093 4.564-8.093 4.564z"/>
+				<path d="m21 7.702-8.5 4.62v9.678c1.567-.865 6.379-3.517 7.977-4.399.323-.177.523-.519.523-.891zm-9.5 4.619-8.5-4.722v9.006c0 .37.197.708.514.887 1.59.898 6.416 3.623 7.986 4.508zm-8.079-5.629 8.579 4.763 8.672-4.713s-6.631-3.738-8.186-4.614c-.151-.085-.319-.128-.486-.128-.168 0-.335.043-.486.128-1.555.876-8.093 4.564-8.093 4.564z" />
 			</svg>
 			<span>{collectibleInfo.itemId}</span>
 		</TextWrapper>
@@ -431,8 +431,12 @@ const TokenIdSection = () => {
 	const { collectibleInfo } = useContext(CollectibleContext);
 	return (
 		<TextWrapper>
-			<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 26 26">
-				<path d="M22.548 9l.452-2h-5.364l1.364-6h-2l-1.364 6h-5l1.364-6h-2l-1.364 6h-6.184l-.452 2h6.182l-1.364 6h-5.36l-.458 2h5.364l-1.364 6h2l1.364-6h5l-1.364 6h2l1.364-6h6.185l.451-2h-6.182l1.364-6h5.366zm-8.73 6h-5l1.364-6h5l-1.364 6z"/>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				fill="currentColor"
+				viewBox="0 0 26 26"
+			>
+				<path d="M22.548 9l.452-2h-5.364l1.364-6h-2l-1.364 6h-5l1.364-6h-2l-1.364 6h-6.184l-.452 2h6.182l-1.364 6h-5.36l-.458 2h5.364l-1.364 6h2l1.364-6h5l-1.364 6h2l1.364-6h6.185l.451-2h-6.182l1.364-6h5.366zm-8.73 6h-5l1.364-6h5l-1.364 6z" />
 			</svg>
 			<span>{collectibleInfo.tokenId}</span>
 		</TextWrapper>

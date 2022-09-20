@@ -5,7 +5,7 @@
 			"has": [
 				{
 					"type": "host",
-					"value": "testnet.sqwid.app"
+					"value": "testnet.glowlab.xyz"
 				}
 			],
 			"destination": "/testnet/:path*"

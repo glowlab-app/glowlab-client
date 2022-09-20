@@ -98,7 +98,7 @@ const Btn = styled(BtnBaseAnimated)`
 
 const outline = css`
 	--app-theme-opacity: 0.75;
-	--app-theme-text: rgb(242, 206, 206);
+	--app-theme-text: rgb(185, 233, 201);
 	border: solid 0.2rem rgba(var(--app-theme-value), var(--app-theme-opacity));
 	/* background: rgba(
 		var(--app-theme-value),

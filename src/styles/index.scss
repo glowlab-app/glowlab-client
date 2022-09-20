@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun:wght@400;500;600;700&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap");
 
 :root {
 	/*
@@ -39,8 +40,7 @@
 		var(--local-gradient);
 	--app-banner-bg-sm: var(--local-vignette-sm), var(--local-dot-pattern),
 		var(--local-gradient);
-	--font-family: "Nunito Sans", "Segoe UI", Tahoma, Geneva, Verdana,
-		sans-serif;
+	--font-family: "Sora", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	--font-family-mono: "Source Code Pro", "Courier New", Courier, monospace;
 	--easing: cubic-bezier(0.83, 0, 0.17, 1);
 	--modal-backdrop: hsla(230, 36%, 4%, 95%);
@@ -102,7 +102,7 @@ html {
 html,
 body {
 	font-family: var(--font-family);
-	font-weight: 500;
+	font-weight: 400;
 	background: var(--app-background);
 	color: var(--app-text);
 	letter-spacing: -1%;
