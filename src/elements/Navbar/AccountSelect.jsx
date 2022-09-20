@@ -355,19 +355,24 @@ const AuthenticateBtn = ({ props }) => {
 			}}
 			onClick={() => {
 				// window.location.reload();
-				Connect ().then (async response => {
-					// login({ auth: { polyjuiceAddress: response.account.polyjuiceAddress, evmAddress: response.account.ethAddress } });
-					login ({ auth: {
-						polyjuiceAddress: response.account.polyjuiceAddress,
-						evmAddress: response.account.ethAddress,
-						address: response.account.ethAddress }
+				Connect()
+					.then(async response => {
+						// login({ auth: { polyjuiceAddress: response.account.polyjuiceAddress, evmAddress: response.account.ethAddress } });
+						login({
+							auth: {
+								polyjuiceAddress:
+									response.account.polyjuiceAddress,
+								evmAddress: response.account.ethAddress,
+								address: response.account.ethAddress,
+							},
+						});
+						// setIsActive(false);
+						redirect.length !== 0 && history.push(redirect);
+					})
+					.catch(error => {
+						// console.log (error);
+						throw error;
 					});
-					// setIsActive(false);
-					redirect.length !== 0 && history.push(redirect);
-				}).catch (error => {
-					// console.log (error);
-					throw error;
-				});
 			}}
 			{...props}
 		>
@@ -494,7 +499,9 @@ const AccountSelect = ({ isActive, setIsActive, accounts }) => {
 						</span>
 
 						{auth && <ProfileElement />}
-						{!auth && <AuthenticateBtn>Authenticate</AuthenticateBtn>}
+						{!auth && (
+							<AuthenticateBtn>Authenticate</AuthenticateBtn>
+						)}
 						{!auth && (
 							<>
 								<DividerHorizontal />
@@ -534,7 +541,7 @@ const AccountSelect = ({ isActive, setIsActive, accounts }) => {
 								<br />
 								Please claim it and try logging in again.
 								<br />
-								You will need some CKB in order to pay for the
+								You will need some EVMOS in order to pay for the
 								transaction.
 							</Content>
 							<Button

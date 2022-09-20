@@ -3,7 +3,7 @@ import styled from "styled-components";
 import CollectibleContext from "@contexts/Collectible/CollectibleContext";
 import AuthContext from "@contexts/Auth/AuthContext";
 import { domAnimation, LazyMotion } from "framer-motion";
-import NervosIcon from "@static/svg/NervosIcon";
+import EVMOSIcon from "@static/svg/EVMOSIcon";
 import { numberSeparator } from "@utils/numberSeparator";
 import { BtnBaseAnimated } from "@elements/Default/BtnBase";
 import { BidsModal, PutOnSaleModal, BuyModal, TransferModal } from "./Modals";
@@ -110,7 +110,7 @@ const CurrentPrice = () => {
 	}, [collectibleInfo.price]);
 	return (
 		<Price>
-			<NervosIcon />
+			<EVMOSIcon />
 			<p>
 				<label title={numberSeparator(collectibleInfo.price)}>
 					{numberSeparator(collectibleInfo.price)}
@@ -129,7 +129,7 @@ const HighestBid = () => {
 				<>
 					Highest Bid:{" "}
 					<label title={numberSeparator(collectibleInfo.highestBid)}>
-						<NervosIcon centered size={24} />{" "}
+						<EVMOSIcon centered size={24} />{" "}
 						{numberSeparator(collectibleInfo.highestBid)}
 					</label>
 				</>

@@ -24,7 +24,7 @@ import shortenIfAddress from "@utils/shortenIfAddress";
 import { numberSeparator } from "@utils/numberSeparator";
 import { BtnBaseAnimated } from "@elements/Default/BtnBase";
 import { LazyMotion, domAnimation, m } from "framer-motion";
-import NervosIcon from "@static/svg/NervosIcon";
+import EVMOSIcon from "@static/svg/EVMOSIcon";
 import { getWithdrawableBalance, withdrawBalance } from "@utils/marketplace";
 import { convertREEFtoUSD } from "@utils/convertREEFtoUSD";
 
@@ -397,7 +397,7 @@ const Withdraw = () => {
 			await withdrawBalance();
 		} catch (err) {
 			if (err.message.includes("No Reef to be claimed")) {
-				bread("Not enough CKB to withdraw");
+				bread("Not enough EVMOS to withdraw");
 			}
 		} finally {
 			setLoading(false);
@@ -415,7 +415,7 @@ const Withdraw = () => {
 					>
 						<WithdrawHeading>Available to Withdraw</WithdrawHeading>
 						<WithdrawAmount>
-							<NervosIcon size={22} />{" "}
+							<EVMOSIcon size={22} />{" "}
 							<span
 								title={numberSeparator(
 									Math.trunc(price).toString()
@@ -639,7 +639,8 @@ const ProfileCard = () => {
 					setIsLoading(false);
 				});
 			id
-				? (id.toLowerCase () === auth?.address.toLowerCase () || id === auth?.evmAddress) &&
+				? (id.toLowerCase() === auth?.address.toLowerCase() ||
+						id === auth?.evmAddress) &&
 				  setIsOwnAccount(true)
 				: setIsOwnAccount(true);
 		}

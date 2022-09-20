@@ -3,7 +3,7 @@ import styled, { css, keyframes } from "styled-components";
 import { LazyMotion, domAnimation } from "framer-motion";
 import { BtnBaseAnimated } from "@elements/Default/BtnBase";
 //eslint-disable-next-line
-import NervosIcon from "@static/svg/NervosIcon";
+import EVMOSIcon from "@static/svg/EVMOSIcon";
 import Loading from "@elements/Default/Loading";
 import CollectibleContext from "@contexts/Collectible/CollectibleContext";
 import {
@@ -443,7 +443,7 @@ export const CreateAuctionModal = props => {
 						onChange={e => {
 							setMinBid(e.target.value);
 						}}
-						placeholder={`Minimum bid for the lot in CKB`}
+						placeholder={`Minimum bid for the lot in EVMOS`}
 					/>
 					<InputTitle>Number of Copies</InputTitle>
 					<InputContainer
@@ -551,7 +551,7 @@ export const PutOnSaleModal = props => {
 						type="number"
 						value={price}
 						onChange={handleInput}
-						placeholder={`Enter Price (in CKB)`}
+						placeholder={`Enter Price (in EVMOS)`}
 					/>
 					<InputTitle>
 						Number of Copies{" "}
@@ -662,14 +662,14 @@ export const LendModal = props => {
 						type="number"
 						value={amount}
 						onChange={e => setAmount(e.target.value)}
-						placeholder={`Amount to borrow (in CKB)`}
+						placeholder={`Amount to borrow (in EVMOS)`}
 					/>
 					<InputTitle>Payback Fee</InputTitle>
 					<InputContainer
 						type="number"
 						value={paybackFee}
 						onChange={e => setPaybackFee(e.target.value)}
-						placeholder={`Amount to pay the lender as interest (in CKB)`}
+						placeholder={`Amount to pay the lender as interest (in EVMOS)`}
 					/>
 					<InputTitle>Number of Copies</InputTitle>
 					<InputContainer
@@ -820,7 +820,7 @@ export const EnterRaffleModal = props => {
 				setButtonText(initialButtonText);
 				setAmount("");
 				props.setIsActive(false);
-				bread(`You've added ${amount} CKB to the raffle!`);
+				bread(`You've added ${amount} EVMOS to the raffle!`);
 				setTimeout(() => {
 					window.location.reload();
 				}, 3000);
@@ -844,7 +844,7 @@ export const EnterRaffleModal = props => {
 					type="number"
 					value={amount}
 					onChange={e => setAmount(e.target.value)}
-					placeholder={`Amount to be sent (in CKB)`}
+					placeholder={`Amount to be sent (in EVMOS)`}
 				/>
 				<AnimBtn disabled={isLoading} onClick={handleClick}>
 					{buttonText}
@@ -895,7 +895,7 @@ export const BidsModal = props => {
 				setButtonText(initialButtonText);
 				setAmount("");
 				props.setIsActive(false);
-				bread(`You bid ${amount} CKB!`);
+				bread(`You bid ${amount} EVMOS!`);
 				setTimeout(() => {
 					window.location.reload();
 				}, 3000);
@@ -923,7 +923,7 @@ export const BidsModal = props => {
 					type="number"
 					value={amount}
 					onChange={handleAmountInput}
-					placeholder={`Amount to bid (in CKB)`}
+					placeholder={`Amount to bid (in EVMOS)`}
 				/>
 				<AnimBtn disabled={isLoading} onClick={handleClick}>
 					{buttonText}
@@ -950,7 +950,7 @@ export const BuyModal = props => {
 			setButtonText(
 				`Buy for ${
 					amount * (collectibleInfo.sale.price / 10 ** 18)
-				} CKB`
+				} EVMOS`
 			);
 		} else {
 			setButtonText(initialButtonText);

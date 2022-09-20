@@ -1,4 +1,4 @@
-import NervosIcon from "@static/svg/NervosIcon";
+import EVMOSIcon from "@static/svg/EVMOSIcon";
 import { numberSeparator } from "@utils/numberSeparator";
 import React from "react";
 
@@ -64,7 +64,7 @@ const CardInfo = ({ data, lenderExists }) => {
 					<BottomContainer>
 						{fee ? (
 							<Fee title={`Interest Amount: ${fee} REEF`}>
-								Returns: <NervosIcon size={`1.125rem`} />
+								Returns: <EVMOSIcon size={`1.125rem`} />
 								<span>{fee}</span>
 							</Fee>
 						) : null}
@@ -75,7 +75,7 @@ const CardInfo = ({ data, lenderExists }) => {
 					<BottomContainer>
 						{price ? (
 							<Price title={`Loan Amount: ${price} REEF`}>
-								<NervosIcon size={`1.5rem`} />
+								<EVMOSIcon size={`1.5rem`} />
 								<span>{price}</span>
 							</Price>
 						) : null}
