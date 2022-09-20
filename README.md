@@ -4,14 +4,14 @@
 </p>
 <p align="center">
   <img alt="Version" src="https://shields.io/github/package-json/v/boidushya/glowlab-client" />
-  <a href="https://github.com/boidushya/tephra-client//blob/master/LICENSE" target="_blank">
+  <a href="https://github.com/boidushya/glowlab-client//blob/master/LICENSE" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/github/license/boidushya/glowlab-client" />
   </a>
 </p>
 
 <p align="center">
 <img style="border-radius:7.5px" alt="Logo" src="public/landing-rounded.png"/>
-<h2 align="center"> <a href="https://tephra-client.vercel.app" target="_blank">Glowlab</a> - Glowing with creativity</h2> 
+<h2 align="center"> <a href="https://glowlab-client.vercel.app" target="_blank">Glowlab</a> - Glowing with creativity</h2> 
 </p>
 
 ## 👨‍💻 About Glowlab
