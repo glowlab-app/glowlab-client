@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.3.11 (2022-09-20)
+
+
+### Features
+
+* initial commit ([9b33fa8](https://github.com/glowlab-app/glowlab-client/commit/9b33fa816f131d634497009d77c5e7bd346cbd3a))
+
 ### 0.3.10 (2022-07-27)
 
 
