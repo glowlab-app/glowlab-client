@@ -94,9 +94,9 @@ const HeroSection = () => {
 				let conversionRate = null;
 				try {
 					let res = await axios(
-						"https://api.coingecko.com/api/v3/simple/price?ids=nervos&vs_currencies=usd"
+						"https://api.coingecko.com/api/v3/simple/price?ids=evmos&vs_currencies=usd"
 					);
-					let price = res.data["nervos"]?.usd;
+					let price = res.data["evmos"]?.usd;
 					conversionRate = Number(price);
 				} catch (err) {
 					bread(err.response.data.error);
@@ -120,7 +120,7 @@ const HeroSection = () => {
 				`${getBackend()}/get/marketplace/position/${addr}`
 			);
 			const pricePromise = axios(
-				"https://api.coingecko.com/api/v3/simple/price?ids=nervos&vs_currencies=usd"
+				"https://api.coingecko.com/api/v3/simple/price?ids=evmos&vs_currencies=usd"
 			);
 			try {
 				const [collectible, price] = await Promise.all([
@@ -134,7 +134,7 @@ const HeroSection = () => {
 					});
 				else {
 					let conversionRate = price.data
-						? price.data["nervos"]?.usd
+						? price.data["evmos"]?.usd
 						: 0;
 					setCollectibleInfo({
 						...collectible.data,

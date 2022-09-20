@@ -326,7 +326,7 @@ const CurrentPrice = () => {
 			<EVMOSIcon size={24} />
 			<p>
 				<label title={numberSeparator(price.toString())}>
-					{numberSeparator(Math.trunc(price).toString())}
+					{numberSeparator(price.toString())}
 				</label>
 				<span>(${usdPrice})</span>
 			</p>

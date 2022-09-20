@@ -164,7 +164,7 @@ const Balance = () => {
 		const fetchBalance = async () => {
 			const bal = await getBalance();
 			// const balNum = Number(bal) / 10 ** 18;
-			setBalance(numberSeparator(bal));
+			setBalance(numberSeparator((Number (bal).toFixed (4)).toString ()));
 		};
 		fetchBalance();
 	}, []);

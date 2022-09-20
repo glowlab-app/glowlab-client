@@ -6,8 +6,8 @@ export const networks = {
 			erc1155: "0xcCB22CdA4857E1665dE3043FF77ff125c9E0A2A7", // updated
 			utility: "0x15D45AE2f71C708d4dc85e95961d528fdfbbCca4", // updated
 		},
-		// backend: "https://testnet-api.tephra.app",
 		backend: "https://testnet-api.glowlab.xyz",
+		// backend: "http://localhost:8080",
 	},
 	glowlab_mainnet: {
 		rpc: "https://eth.bd.evmos.dev:8545",

@@ -496,7 +496,7 @@ export const PutOnSaleModal = props => {
 		setCopies(amount || "");
 	};
 	const handleClick = async () => {
-		if (!isLoading && Number(price) >= 1 && Number(copies) >= 1) {
+		if (!isLoading && Number(price) > 0 && Number(copies) >= 1) {
 			setIsLoading(true);
 			setButtonText(<Loading />);
 			const receipt = await putItemOnSale(
