@@ -1,13 +1,12 @@
 const constants = {
 	APP_NAME: "Glowlab",
 	APP_DESCRIPTION: "Glowing with creativity",
-	APP_ABOUT:
-		"Where art meets the blockchain.",
+	APP_ABOUT: "Where art meets the blockchain.",
 	APP_WEBSITE: "https://glowlab.xyz",
-	APP_SCAN_BASE_URL: "https://gw-explorer.nervosdao.community/",
+	APP_SCAN_BASE_URL: "https://evm.evmos.org/",
 	SOCIAL: {
 		TWITTER_HANDLE: "glowlab-app",
-		GITHUB_HANDLE: "glowlab",
+		GITHUB_HANDLE: "glowlab-app",
 	},
 	STATE_TYPES: ["Available", "Sale", "Auction", "Raffle", "Loan"],
 	STATE_EMPTY_MESSAGE_MAP: [
@@ -24,19 +23,7 @@ const constants = {
 		raffle: "🎲",
 		loan: "🏦",
 	},
-	CREATE_ACCEPTED_MIMETYPES: [
-		"image/jpeg",
-		"image/png",
-		"video/mp4",
-	],
-	DOCUMENTATION: {
-		base: "https://github.com/sqwid-app/sqwid-docs",
-		sale: "https://github.com/sqwid-app/sqwid-docs/blob/main/market_interaction/regular_sale.md",
-		auction:
-			"https://github.com/sqwid-app/sqwid-docs/blob/main/market_interaction/auction.md",
-		raffle: "https://github.com/sqwid-app/sqwid-docs/blob/main/market_interaction/raffle.md",
-		loan: "https://github.com/sqwid-app/sqwid-docs/blob/main/market_interaction/loan.md",
-	},
+	CREATE_ACCEPTED_MIMETYPES: ["image/jpeg", "image/png", "video/mp4"],
 	EXPLORE_PAGINATION_LIMIT: 12,
 	COPY_WARNING: "Use this address only on the Evmos",
 };
